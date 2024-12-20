@@ -1,6 +1,7 @@
 """Common functionality for the run scripts."""
 
 import json
+import os
 import sys
 from argparse import ArgumentParser
 from collections import defaultdict
@@ -18,6 +19,34 @@ from rich.panel import Panel
 from sweagent import CONFIG_DIR
 from sweagent.types import AgentInfo, AgentRunResult
 from sweagent.utils.log import get_logger
+
+
+def check_codespace_setup():
+    """Check if we're in a Codespace and if setup is complete."""
+    if not os.getenv("CODESPACES"):
+        return True  # Not in Codespaces, no need to check
+
+    status_file = os.path.expanduser("~/.swe_agent_setup_status")
+    if not os.path.exists(status_file):
+        return True  # No status file, assume not in Codespaces setup
+
+    with open(status_file) as f:
+        status = f.read().strip()
+
+    if status == "setup_started":
+        rich_print(Panel.fit(
+            "[yellow]⚠️ Codespace setup is still in progress.[/yellow]\n"
+            "Please wait for the postCreateCommand to complete in the terminal window.\n"
+            "You can check the progress in the 'Terminal' tab at the bottom."
+        ))
+        return False
+    elif status == "setup_failed":
+        rich_print(Panel.fit(
+            "[red]❌ Codespace setup failed.[/red]\n"
+            "Please check the terminal output for errors and try restarting the Codespace."
+        ))
+        return False
+    return True
 
 
 def _shorten_strings(data, *, max_length=30):
@@ -58,6 +87,7 @@ For example, there are different deployments with different options each. Pydant
 one after the other and reporting the failures for each of them.
 More on union types: [link=https://swe-agent.com/latest/usage/cl_tutorial/#union-types]https://swe-agent.com/latest/usage/cl_tutorial/#union-types[/link]
 """
+
 
 _SETTING_ERROR_HINTS = """
 [red][bold]Hints:[/bold][/red]
@@ -200,6 +230,10 @@ class BasicCLI:
         self.default_settings = default_settings
         self.logger = get_logger("swea-cli", emoji="🔧")
         self.help_text = help_text
+
+        # Check Codespace setup status before proceeding
+        if not check_codespace_setup():
+            sys.exit(1)
 
     def maybe_show_auto_correct(self, args: list[str]):
         auto_correct = []
