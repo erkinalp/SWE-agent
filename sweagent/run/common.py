@@ -26,12 +26,11 @@ def check_codespace_setup():
     if not os.getenv("CODESPACES"):
         return True  # Not in Codespaces, no need to check
 
-    status_file = os.path.expanduser("~/.swe_agent_setup_status")
-    if not os.path.exists(status_file):
+    status_file = Path.home() / ".swe_agent_setup_status"
+    if not status_file.exists():
         return True  # No status file, assume not in Codespaces setup
 
-    with open(status_file) as f:
-        status = f.read().strip()
+    status = status_file.read_text().strip()
 
     if status == "setup_started":
         rich_print(Panel.fit(
