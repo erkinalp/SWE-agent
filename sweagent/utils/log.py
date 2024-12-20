@@ -31,6 +31,7 @@ def _interpret_level(level: int | str | None, *, default=logging.DEBUG) -> int:
 _STREAM_LEVEL = None
 _FILE_LEVEL = None
 
+
 def set_default_levels(stream_level: int | str | None = None, file_level: int | str | None = None) -> None:
     """Set the default logging levels for stream and file handlers.
 
@@ -41,6 +42,7 @@ def set_default_levels(stream_level: int | str | None = None, file_level: int | 
     global _STREAM_LEVEL, _FILE_LEVEL
     _STREAM_LEVEL = _interpret_level(stream_level or os.environ.get("SWE_AGENT_LOG_STREAM_LEVEL"))
     _FILE_LEVEL = _interpret_level(file_level or os.environ.get("SWE_AGENT_LOG_FILE_LEVEL"), default=logging.TRACE)  # type: ignore
+
 
 _INCLUDE_LOGGER_NAME_IN_STREAM_HANDLER = False
 

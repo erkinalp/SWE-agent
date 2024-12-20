@@ -217,7 +217,6 @@ class BasicCLI:
 
     def get_config(self, args: list[str] | None = None) -> BaseSettings:
         """Get the configuration object from defaults and command arguments."""
-        from sweagent.utils.log import set_default_levels  # Import here to avoid circular imports
 
         # >>> Step 1: Use argparse to add a --config option to load whole config files
 
