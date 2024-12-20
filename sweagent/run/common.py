@@ -217,6 +217,7 @@ class BasicCLI:
 
     def get_config(self, args: list[str] | None = None) -> BaseSettings:
         """Get the configuration object from defaults and command arguments."""
+        from sweagent.utils.log import set_default_levels  # Import here to avoid circular imports
 
         # >>> Step 1: Use argparse to add a --config option to load whole config files
 
@@ -232,6 +233,12 @@ class BasicCLI:
                 "Load additional config files. Use this option multiple times to load "
                 "multiple files, e.g., --config config1.yaml --config config2.yaml"
             ),
+        )
+        parser.add_argument(
+            "--verbosity",
+            choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"],
+            help="Set the logging verbosity level",
+            default=None,
         )
         parser.add_argument(
             "-h",
