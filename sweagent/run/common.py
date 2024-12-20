@@ -34,17 +34,21 @@ def check_codespace_setup():
         status = f.read().strip()
 
     if status == "setup_started":
-        rich_print(Panel.fit(
-            "[yellow]⚠️ Codespace setup is still in progress.[/yellow]\n"
-            "Please wait for the postCreateCommand to complete in the terminal window.\n"
-            "You can check the progress in the 'Terminal' tab at the bottom."
-        ))
+        rich_print(
+            Panel.fit(
+                "[yellow]⚠️ Codespace setup is still in progress.[/yellow]\n"
+                "Please wait for the postCreateCommand to complete in the terminal window.\n"
+                "You can check the progress in the 'Terminal' tab at the bottom."
+            )
+        )
         return False
     elif status == "setup_failed":
-        rich_print(Panel.fit(
-            "[red]❌ Codespace setup failed.[/red]\n"
-            "Please check the terminal output for errors and try restarting the Codespace."
-        ))
+        rich_print(
+            Panel.fit(
+                "[red]❌ Codespace setup failed.[/red]\n"
+                "Please check the terminal output for errors and try restarting the Codespace."
+            )
+        )
         return False
     return True
 
