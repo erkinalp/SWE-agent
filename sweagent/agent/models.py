@@ -121,6 +121,7 @@ class ReplayModelConfig(GenericAPIModelConfig):
     name: Literal["replay"] = Field(default="replay", description="Model name.")
     model_config = ConfigDict(extra="forbid")
 
+
 class OllamaModelConfig(GenericAPIModelConfig):
     name: Literal["ollama"] = Field(default="ollama", description="Model name.")
     model_id: str = Field(description="Ollama model identifier (e.g. 'llama2', 'mistral', etc.)")
@@ -600,7 +601,12 @@ def get_model(args: ModelConfig, tools: ToolConfig) -> AbstractModel:
     """Returns correct model object given arguments and commands"""
     # Convert GenericAPIModelConfig to specific model config if needed
     if isinstance(args, GenericAPIModelConfig) and not isinstance(
-        args, HumanModelConfig | HumanThoughtModelConfig | ReplayModelConfig | InstantEmptySubmitModelConfig | OllamaModelConfig
+        args,
+        HumanModelConfig
+        | HumanThoughtModelConfig
+        | ReplayModelConfig
+        | InstantEmptySubmitModelConfig
+        | OllamaModelConfig,
     ):
         if args.name == "human":
             args = HumanModelConfig(**args.model_dump())

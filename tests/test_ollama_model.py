@@ -1,6 +1,7 @@
 """Tests for Ollama model integration."""
+
 import pytest
-from pathlib import Path
+
 from sweagent.agent.models import OllamaModelConfig, get_model
 from sweagent.agent.tools import ToolConfig
 
@@ -55,6 +56,7 @@ def test_ollama_model_config_validation():
 def test_ollama_model_from_generic():
     """Test creating Ollama model from generic config."""
     from sweagent.agent.models import GenericAPIModelConfig
+
     config = GenericAPIModelConfig(
         name="ollama",
         api_base="http://localhost:11434",
