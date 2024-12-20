@@ -21,21 +21,21 @@ class TestLogging(TestCase):
         """Test that verbosity levels are properly set."""
         # Test default level
         logger = get_logger("test")
-        self.assertEqual(logger.getEffectiveLevel(), logging.DEBUG)
+        assert logger.getEffectiveLevel() == logging.DEBUG
 
         # Test setting via function
         set_default_levels(stream_level="INFO")
         logger = get_logger("test2")
-        self.assertEqual(logger.getEffectiveLevel(), logging.INFO)
+        assert logger.getEffectiveLevel() == logging.INFO
 
         # Test environment variable override
         with mock.patch.dict(os.environ, {"SWE_AGENT_LOG_STREAM_LEVEL": "ERROR"}):
             set_default_levels()  # Reset to use env vars
             logger = get_logger("test3")
-            self.assertEqual(logger.getEffectiveLevel(), logging.ERROR)
+            assert logger.getEffectiveLevel() == logging.ERROR
 
         # Test explicit level overrides env var
         with mock.patch.dict(os.environ, {"SWE_AGENT_LOG_STREAM_LEVEL": "ERROR"}):
             set_default_levels(stream_level="DEBUG")
             logger = get_logger("test4")
-            self.assertEqual(logger.getEffectiveLevel(), logging.DEBUG)
+            assert logger.getEffectiveLevel() == logging.DEBUG
