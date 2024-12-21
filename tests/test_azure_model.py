@@ -11,7 +11,7 @@ def test_azure_endpoint_warning(caplog):
     )
     tools = ToolConfig()
 
-    model = LiteLLMModel(config, tools)
+    _ = LiteLLMModel(config, tools)
 
     assert any(
         "Using Azure endpoint - the --model CLI argument will be ignored" in record.message for record in caplog.records
@@ -23,7 +23,7 @@ def test_non_azure_endpoint_no_warning(caplog):
     config = GenericAPIModelConfig(name="gpt-4", api_base="https://api.openai.com/v1")
     tools = ToolConfig()
 
-    model = LiteLLMModel(config, tools)
+    _ = LiteLLMModel(config, tools)
 
     assert not any(
         "Using Azure endpoint - the --model CLI argument will be ignored" in record.message for record in caplog.records

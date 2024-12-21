@@ -25,7 +25,7 @@ def load_config(config_path: str = None) -> dict:
         dict: Configuration dictionary
     """
     if not config_path:
-        config_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "config", "github.yaml")
+        config_path = Path(__file__).parent.parent.parent / "config" / "github.yaml"
 
     with open(config_path) as f:
         return yaml.safe_load(f)
@@ -49,7 +49,6 @@ def action(event_path: str, token: str, config: str = None):
     """
     # Load config
     config_data = load_config(config)
-    action_config = config_data["github"]["action"]
 
     # Initialize agent
     agent = Agent()

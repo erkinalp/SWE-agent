@@ -72,7 +72,8 @@ class GitHubWebhookHandler(BaseHTTPRequestHandler):
             event = json.loads(payload)
             event_type = self.headers.get("X-GitHub-Event", "")
             if not event_type:
-                raise ValueError("Missing X-GitHub-Event header")
+                error_msg = "Missing X-GitHub-Event header"
+                raise ValueError(error_msg)
 
             # Add event type to payload
             event["event_name"] = event_type
@@ -146,11 +147,13 @@ class GitHubBotRouter:
         """
         event_name = event.get("event_name")
         if event_name not in self.SUPPORTED_EVENTS:
-            raise UnsupportedEventError(f"Unsupported event type: {event_name}")
+            error_msg = f"Unsupported event type: {event_name}"
+            raise UnsupportedEventError(error_msg)
 
         action = event.get("action")
         if action not in self.SUPPORTED_EVENTS[event_name]:
-            raise UnsupportedEventError(f"Unsupported action '{action}' for event type '{event_name}'")
+            error_msg = f"Unsupported action '{action}' for event type '{event_name}'"
+            raise UnsupportedEventError(error_msg)
 
     def _handle_issue(self, event: dict[str, Any]) -> None:
         """Handle GitHub issue event.
@@ -215,7 +218,8 @@ class GitHubBotRouter:
             RuntimeError: If server is already running
         """
         if self.server:
-            raise RuntimeError("Webhook server is already running")
+            error_msg = "Webhook server is already running"
+            raise RuntimeError(error_msg)
 
         def create_handler(*args, **kwargs):
             return GitHubWebhookHandler(*args, router=self, secret=self.webhook_secret, **kwargs)

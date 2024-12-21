@@ -84,11 +84,13 @@ class GitHubActionRouter:
         """
         event_name = event.get("event_name")
         if event_name not in self.SUPPORTED_EVENTS:
-            raise UnsupportedEventError(f"Unsupported event type: {event_name}")
+            error_msg = f"Unsupported event type: {event_name}"
+            raise UnsupportedEventError(error_msg)
 
         action = event.get("action")
         if action not in self.SUPPORTED_EVENTS[event_name]:
-            raise UnsupportedEventError(f"Unsupported action '{action}' for event type '{event_name}'")
+            error_msg = f"Unsupported action '{action}' for event type '{event_name}'"
+            raise UnsupportedEventError(error_msg)
 
     def _handle_issue(self, event: dict[str, Any]) -> None:
         """Handle GitHub issue event.

@@ -18,8 +18,7 @@ def mock_agent():
 @pytest.fixture
 def event_path(tmp_path):
     """Create temporary event file."""
-    path = tmp_path / "event.json"
-    return path
+    return tmp_path / "event.json"
 
 
 @pytest.fixture

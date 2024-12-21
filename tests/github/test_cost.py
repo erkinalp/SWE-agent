@@ -96,7 +96,6 @@ def test_cost_tracking(optimizer):
 def test_state_caching(optimizer):
     """Test model state caching."""
     event_id = "test-123"
-    test_state = {"key": "value"}
 
     # Cache miss
     optimizer.state.get_model_state.return_value = None
