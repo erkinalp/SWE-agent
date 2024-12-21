@@ -4,7 +4,6 @@ This module provides CLI commands for running SWE-agent as a GitHub Action
 or bot, supporting both modes through a unified interface.
 """
 
-import os
 from pathlib import Path
 
 import click

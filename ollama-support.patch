@@ -245,20 +245,20 @@ index 6ec68f4b..fe73df9d 100644
 --- a/sweagent/agent/models.py
 +++ b/sweagent/agent/models.py
 @@ -118,9 +118,13 @@ class GenericAPIModelConfig(PydanticBaseModel):
- 
+
  class ReplayModelConfig(GenericAPIModelConfig):
      replay_path: Path = Field(description="Path to replay file when using the replay model.")
 -
      name: Literal["replay"] = Field(default="replay", description="Model name.")
 +    model_config = ConfigDict(extra="forbid")
- 
+
 +class OllamaModelConfig(GenericAPIModelConfig):
 +    name: Literal["ollama"] = Field(default="ollama", description="Model name.")
 +    model_id: str = Field(description="Ollama model identifier (e.g. 'llama2', 'mistral', etc.)")
 +    api_base: str = Field(default="http://localhost:11434", description="Ollama API base URL")
      model_config = ConfigDict(extra="forbid")
- 
- 
+
+
 @@ -152,7 +156,8 @@ ModelConfig = Annotated[
      | ReplayModelConfig
      | InstantEmptySubmitModelConfig
@@ -268,7 +268,7 @@ index 6ec68f4b..fe73df9d 100644
 +    | OllamaModelConfig,
      Field(union_mode="left_to_right"),
  ]
- 
+
 @@ -595,7 +600,7 @@ def get_model(args: ModelConfig, tools: ToolConfig) -> AbstractModel:
      """Returns correct model object given arguments and commands"""
      # Convert GenericAPIModelConfig to specific model config if needed
@@ -284,7 +284,7 @@ index 6ec68f4b..fe73df9d 100644
              args = InstantEmptySubmitModelConfig(**args.model_dump())
 +        elif args.name == "ollama":
 +            args = OllamaModelConfig(**args.model_dump())
- 
+
      if args.name == "human":
          assert isinstance(args, HumanModelConfig), f"Expected {HumanModelConfig}, got {args}"
 @@ -618,5 +625,8 @@ def get_model(args: ModelConfig, tools: ToolConfig) -> AbstractModel:
@@ -370,6 +370,6 @@ index 00000000..9f88f875
 +    assert model is not None
 +    assert isinstance(model.args, OllamaModelConfig)
 +    assert model.args.api_base == "http://localhost:11434"
--- 
+--
 2.34.1
 
