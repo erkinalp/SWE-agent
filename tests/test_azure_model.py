@@ -13,7 +13,8 @@ def test_azure_endpoint_warning(caplog):
     )
     tools = ToolConfig()
 
-    model = LiteLLMModel(config, tools)
+    # Initialize model to trigger warning
+    LiteLLMModel(config, tools)
 
     assert any(
         "Using Azure endpoint - the --model CLI argument will be ignored" in record.message
@@ -29,7 +30,8 @@ def test_non_azure_endpoint_no_warning(caplog):
     )
     tools = ToolConfig()
 
-    model = LiteLLMModel(config, tools)
+    # Initialize model to verify no warning
+    LiteLLMModel(config, tools)
 
     assert not any(
         "Using Azure endpoint - the --model CLI argument will be ignored" in record.message
