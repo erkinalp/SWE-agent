@@ -46,9 +46,6 @@ def action(event_path: str, token: str, config: str = None):
     Process GitHub events from Actions environment using the provided
     event payload and token.
     """
-    # Load config
-    config_data = load_config(config)
-
     # Initialize agent
     agent = Agent()
 
