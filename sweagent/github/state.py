@@ -11,9 +11,10 @@ import sqlite3
 import threading
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any
 
 logger = logging.getLogger("swea-gh-state")
+
 
 class GitHubState:
     """Manages persistent state for GitHub integration.
@@ -97,13 +98,7 @@ class GitHubState:
             """)
             conn.commit()
 
-    def save_event(
-        self,
-        event_id: str,
-        event_type: str,
-        action: str,
-        created_at: datetime
-    ) -> None:
+    def save_event(self, event_id: str, event_type: str, action: str, created_at: datetime) -> None:
         """Save new event.
 
         Args:
@@ -120,16 +115,11 @@ class GitHubState:
                 (id, type, action, created_at)
                 VALUES (?, ?, ?, ?)
                 """,
-                (event_id, event_type, action, created_at)
+                (event_id, event_type, action, created_at),
             )
             conn.commit()
 
-    def mark_event_processed(
-        self,
-        event_id: str,
-        cost: float,
-        tokens: int
-    ) -> None:
+    def mark_event_processed(self, event_id: str, cost: float, tokens: int) -> None:
         """Mark event as processed with cost tracking.
 
         Args:
@@ -146,7 +136,7 @@ class GitHubState:
                 SET processed_at = ?, cost = ?, tokens = ?
                 WHERE id = ?
                 """,
-                (now, cost, tokens, event_id)
+                (now, cost, tokens, event_id),
             )
             conn.execute(
                 """
@@ -154,11 +144,11 @@ class GitHubState:
                 (event_id, timestamp, cost, tokens)
                 VALUES (?, ?, ?, ?)
                 """,
-                (event_id, now, cost, tokens)
+                (event_id, now, cost, tokens),
             )
             conn.commit()
 
-    def save_model_state(self, event_id: str, state: Dict[str, Any]) -> None:
+    def save_model_state(self, event_id: str, state: dict[str, Any]) -> None:
         """Save model state for event.
 
         Args:
@@ -173,11 +163,11 @@ class GitHubState:
                 (event_id, state, updated_at)
                 VALUES (?, ?, ?)
                 """,
-                (event_id, json.dumps(state), datetime.utcnow())
+                (event_id, json.dumps(state), datetime.utcnow()),
             )
             conn.commit()
 
-    def get_model_state(self, event_id: str) -> Optional[Dict[str, Any]]:
+    def get_model_state(self, event_id: str) -> dict[str, Any] | None:
         """Get model state for event.
 
         Args:
@@ -193,7 +183,7 @@ class GitHubState:
                 SELECT state FROM model_states
                 WHERE event_id = ?
                 """,
-                (event_id,)
+                (event_id,),
             ).fetchone()
 
             if row:
@@ -218,16 +208,12 @@ class GitHubState:
                 FROM cost_tracking
                 WHERE timestamp >= ?
                 """,
-                (hours, start_time)
+                (hours, start_time),
             ).fetchone()
 
             return row[0] or 0.0
 
-    def get_event_stats(
-        self,
-        event_type: Optional[str] = None,
-        hours: int = 24
-    ) -> List[Tuple[str, int, float, int]]:
+    def get_event_stats(self, event_type: str | None = None, hours: int = 24) -> list[tuple[str, int, float, int]]:
         """Get event processing statistics.
 
         Args:
@@ -284,10 +270,7 @@ class GitHubState:
             conn.execute("BEGIN")
             try:
                 # Delete old cost tracking entries
-                conn.execute(
-                    "DELETE FROM cost_tracking WHERE timestamp < ?",
-                    (cutoff,)
-                )
+                conn.execute("DELETE FROM cost_tracking WHERE timestamp < ?", (cutoff,))
 
                 # Delete old model states
                 conn.execute(
@@ -297,14 +280,11 @@ class GitHubState:
                         SELECT id FROM events WHERE created_at < ?
                     )
                     """,
-                    (cutoff,)
+                    (cutoff,),
                 )
 
                 # Delete old events and get count
-                cursor = conn.execute(
-                    "DELETE FROM events WHERE created_at < ?",
-                    (cutoff,)
-                )
+                cursor = conn.execute("DELETE FROM events WHERE created_at < ?", (cutoff,))
                 deleted = cursor.rowcount
 
                 conn.commit()

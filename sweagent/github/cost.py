@@ -5,13 +5,12 @@ maintaining a target cost efficiency of 10 rupees per hour.
 """
 
 import logging
-import time
 from datetime import datetime, timedelta
-from typing import Dict, List, Optional, Set, Tuple
 
 from .state import GitHubState
 
 logger = logging.getLogger("swea-gh-cost")
+
 
 class GitHubCostOptimizer:
     """Optimizes costs for GitHub operations.
@@ -30,11 +29,7 @@ class GitHubCostOptimizer:
     """
 
     def __init__(
-        self,
-        state: GitHubState,
-        target_hourly_cost: float = 10.0,
-        max_batch_size: int = 5,
-        cache_ttl: int = 3600
+        self, state: GitHubState, target_hourly_cost: float = 10.0, max_batch_size: int = 5, cache_ttl: int = 3600
     ):
         """Initialize cost optimizer."""
         self.state = state
@@ -43,14 +38,14 @@ class GitHubCostOptimizer:
         self.cache_ttl = cache_ttl
 
         # Runtime tracking
-        self._current_batch: List[Dict] = []
-        self._processed_events: Set[str] = set()
+        self._current_batch: list[dict] = []
+        self._processed_events: set[str] = set()
         self._last_process_time = datetime.utcnow()
         self._rate_limit_window = timedelta(hours=1)
         self._rate_limit_tokens = 100
         self._rate_limit_last_reset = datetime.utcnow()
 
-    def should_process_event(self, event: Dict) -> bool:
+    def should_process_event(self, event: dict) -> bool:
         """Determine if event should be processed based on cost.
 
         Args:
@@ -77,7 +72,7 @@ class GitHubCostOptimizer:
 
         return True
 
-    def add_to_batch(self, event: Dict) -> bool:
+    def add_to_batch(self, event: dict) -> bool:
         """Add event to current batch.
 
         Args:
@@ -94,7 +89,7 @@ class GitHubCostOptimizer:
 
         return True
 
-    def get_batch(self) -> List[Dict]:
+    def get_batch(self) -> list[dict]:
         """Get current batch of events.
 
         Returns:
@@ -104,12 +99,7 @@ class GitHubCostOptimizer:
         self._current_batch = []
         return batch
 
-    def track_processing(
-        self,
-        event_ids: List[str],
-        cost: float,
-        tokens: int
-    ) -> None:
+    def track_processing(self, event_ids: list[str], cost: float, tokens: int) -> None:
         """Track event processing costs.
 
         Args:
@@ -124,16 +114,12 @@ class GitHubCostOptimizer:
 
         # Track each event
         for event_id in event_ids:
-            self.state.mark_event_processed(
-                event_id,
-                cost_per_event,
-                tokens_per_event
-            )
+            self.state.mark_event_processed(event_id, cost_per_event, tokens_per_event)
 
         # Update rate limit tokens
         self._rate_limit_tokens -= event_count
 
-    def get_cached_state(self, event_id: str) -> Optional[Dict]:
+    def get_cached_state(self, event_id: str) -> dict | None:
         """Get cached model state for event.
 
         Args:
@@ -153,7 +139,7 @@ class GitHubCostOptimizer:
 
         return state
 
-    def cache_state(self, event_id: str, state: Dict) -> None:
+    def cache_state(self, event_id: str, state: dict) -> None:
         """Cache model state for event.
 
         Args:
@@ -163,7 +149,7 @@ class GitHubCostOptimizer:
         state["_updated_at"] = datetime.utcnow().isoformat()
         self.state.save_model_state(event_id, state)
 
-    def _get_event_id(self, event: Dict) -> str:
+    def _get_event_id(self, event: dict) -> str:
         """Get unique identifier for event.
 
         Args:
@@ -196,7 +182,7 @@ class GitHubCostOptimizer:
 
         return self._rate_limit_tokens > 0
 
-    def get_stats(self) -> Tuple[float, int, float]:
+    def get_stats(self) -> tuple[float, int, float]:
         """Get processing statistics.
 
         Returns:
@@ -206,9 +192,6 @@ class GitHubCostOptimizer:
         stats = self.state.get_event_stats(hours=1)
 
         total_events = sum(stat[1] for stat in stats)
-        efficiency = (
-            self.target_hourly_cost / hourly_cost
-            if hourly_cost > 0 else 1.0
-        )
+        efficiency = self.target_hourly_cost / hourly_cost if hourly_cost > 0 else 1.0
 
         return hourly_cost, total_events, efficiency

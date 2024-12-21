@@ -7,16 +7,19 @@ supporting both issue and pull request events.
 import json
 import logging
 from pathlib import Path
-from typing import Any, Dict, Optional
+from typing import Any
 
 from sweagent.agent.agents import Agent
 from sweagent.agent.hooks.github import GitHubEventHook
 
 logger = logging.getLogger("swea-gh-action")
 
+
 class UnsupportedEventError(Exception):
     """Raised when an unsupported event type is received."""
+
     pass
+
 
 class GitHubActionRouter:
     """Routes GitHub Action events to appropriate handlers.
@@ -35,20 +38,20 @@ class GitHubActionRouter:
     SUPPORTED_EVENTS = {
         "issues": ["opened", "edited"],
         "pull_request": ["opened", "synchronize"],
-        "discussion": ["created", "edited"]
+        "discussion": ["created", "edited"],
     }
 
     def __init__(self, agent: Agent, event_path: Path, token: str):
         """Initialize the GitHub Action router."""
         self.agent = agent
         self.event_path = event_path
-        self.event: Optional[Dict[str, Any]] = None
+        self.event: dict[str, Any] | None = None
 
         # Initialize GitHub hook
         self.hook = GitHubEventHook(token=token, mode="action")
         self.agent.hooks.add_hook(self.hook)
 
-    def _load_event(self) -> Dict[str, Any]:
+    def _load_event(self) -> dict[str, Any]:
         """Load GitHub event from event path.
 
         Returns:
@@ -70,7 +73,7 @@ class GitHubActionRouter:
             logger.error(f"Invalid JSON in event file: {self.event_path}")
             raise
 
-    def _validate_event(self, event: Dict[str, Any]) -> None:
+    def _validate_event(self, event: dict[str, Any]) -> None:
         """Validate that the event type and action are supported.
 
         Args:
@@ -85,11 +88,9 @@ class GitHubActionRouter:
 
         action = event.get("action")
         if action not in self.SUPPORTED_EVENTS[event_name]:
-            raise UnsupportedEventError(
-                f"Unsupported action '{action}' for event type '{event_name}'"
-            )
+            raise UnsupportedEventError(f"Unsupported action '{action}' for event type '{event_name}'")
 
-    def _handle_issue(self, event: Dict[str, Any]) -> None:
+    def _handle_issue(self, event: dict[str, Any]) -> None:
         """Handle GitHub issue event.
 
         Args:
@@ -102,7 +103,7 @@ class GitHubActionRouter:
         # Run agent on issue
         self.agent.run()
 
-    def _handle_pull_request(self, event: Dict[str, Any]) -> None:
+    def _handle_pull_request(self, event: dict[str, Any]) -> None:
         """Handle GitHub pull request event.
 
         Args:
@@ -113,7 +114,7 @@ class GitHubActionRouter:
         self.hook.set_current_event(event)
         self.agent.run()
 
-    def _handle_discussion(self, event: Dict[str, Any]) -> None:
+    def _handle_discussion(self, event: dict[str, Any]) -> None:
         """Handle GitHub discussion event.
 
         Args:
@@ -139,7 +140,7 @@ class GitHubActionRouter:
         handlers = {
             "issues": self._handle_issue,
             "pull_request": self._handle_pull_request,
-            "discussion": self._handle_discussion
+            "discussion": self._handle_discussion,
         }
 
         handler = handlers[event_name]

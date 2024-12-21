@@ -1,11 +1,13 @@
 """Tests for GitHub cost optimization."""
 
 from datetime import datetime, timedelta
+from unittest.mock import MagicMock
+
 import pytest
-from unittest.mock import MagicMock, patch
 
 from sweagent.github.cost import GitHubCostOptimizer
 from sweagent.github.state import GitHubState
+
 
 @pytest.fixture
 def mock_state():
@@ -14,14 +16,12 @@ def mock_state():
     state.is_cost_efficient.return_value = True
     return state
 
+
 @pytest.fixture
 def optimizer(mock_state):
     """Create cost optimizer."""
-    return GitHubCostOptimizer(
-        state=mock_state,
-        target_hourly_cost=10.0,
-        max_batch_size=2
-    )
+    return GitHubCostOptimizer(state=mock_state, target_hourly_cost=10.0, max_batch_size=2)
+
 
 def test_optimizer_init(optimizer):
     """Test optimizer initialization."""
@@ -30,12 +30,10 @@ def test_optimizer_init(optimizer):
     assert len(optimizer._current_batch) == 0
     assert len(optimizer._processed_events) == 0
 
+
 def test_should_process_event(optimizer):
     """Test event processing decision."""
-    event = {
-        "event_name": "issues",
-        "issue": {"number": 123}
-    }
+    event = {"event_name": "issues", "issue": {"number": 123}}
 
     # First time should be allowed
     assert optimizer.should_process_event(event)
@@ -46,12 +44,10 @@ def test_should_process_event(optimizer):
     # Second time should be denied
     assert not optimizer.should_process_event(event)
 
+
 def test_cost_efficiency_check(optimizer, mock_state):
     """Test cost efficiency check."""
-    event = {
-        "event_name": "issues",
-        "issue": {"number": 123}
-    }
+    event = {"event_name": "issues", "issue": {"number": 123}}
 
     # Allow when efficient
     mock_state.is_cost_efficient.return_value = True
@@ -61,15 +57,10 @@ def test_cost_efficiency_check(optimizer, mock_state):
     mock_state.is_cost_efficient.return_value = False
     assert not optimizer.should_process_event(event)
 
+
 def test_batch_processing(optimizer):
     """Test event batching."""
-    events = [
-        {
-            "event_name": "issues",
-            "issue": {"number": i}
-        }
-        for i in range(3)
-    ]
+    events = [{"event_name": "issues", "issue": {"number": i}} for i in range(3)]
 
     # First event
     assert optimizer.should_process_event(events[0])
@@ -84,6 +75,7 @@ def test_batch_processing(optimizer):
     assert len(batch) == 2
     assert batch[0]["issue"]["number"] == 0
     assert batch[1]["issue"]["number"] == 1
+
 
 def test_cost_tracking(optimizer):
     """Test cost tracking."""
@@ -100,6 +92,7 @@ def test_cost_tracking(optimizer):
         assert call[0][1] == 5.0  # Cost per event
         assert call[0][2] == 1000  # Tokens per event
 
+
 def test_state_caching(optimizer):
     """Test model state caching."""
     event_id = "test-123"
@@ -110,48 +103,35 @@ def test_state_caching(optimizer):
     assert optimizer.get_cached_state(event_id) is None
 
     # Cache hit but expired
-    old_state = {
-        "key": "value",
-        "_updated_at": (
-            datetime.utcnow() - timedelta(seconds=3601)
-        ).isoformat()
-    }
+    old_state = {"key": "value", "_updated_at": (datetime.utcnow() - timedelta(seconds=3601)).isoformat()}
     optimizer.state.get_model_state.return_value = old_state
     assert optimizer.get_cached_state(event_id) is None
 
     # Cache hit and valid
-    current_state = {
-        "key": "value",
-        "_updated_at": datetime.utcnow().isoformat()
-    }
+    current_state = {"key": "value", "_updated_at": datetime.utcnow().isoformat()}
     optimizer.state.get_model_state.return_value = current_state
     assert optimizer.get_cached_state(event_id) is not None
 
+
 def test_rate_limiting(optimizer):
     """Test rate limiting."""
-    event = {
-        "event_name": "issues",
-        "issue": {"number": 123}
-    }
+    event = {"event_name": "issues", "issue": {"number": 123}}
 
     # Use up rate limit
     optimizer._rate_limit_tokens = 0
     assert not optimizer.should_process_event(event)
 
     # Reset window
-    optimizer._rate_limit_last_reset = (
-        datetime.utcnow() - timedelta(hours=2)
-    )
+    optimizer._rate_limit_last_reset = datetime.utcnow() - timedelta(hours=2)
     assert optimizer.should_process_event(event)
     assert optimizer._rate_limit_tokens == 100
+
 
 def test_get_stats(optimizer):
     """Test getting statistics."""
     # Mock state responses
     optimizer.state.get_hourly_cost.return_value = 5.0
-    optimizer.state.get_event_stats.return_value = [
-        ("issues", 10, 5.0, 1000)
-    ]
+    optimizer.state.get_event_stats.return_value = [("issues", 10, 5.0, 1000)]
 
     # Get stats
     hourly_cost, events, efficiency = optimizer.get_stats()

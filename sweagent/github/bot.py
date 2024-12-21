@@ -4,22 +4,25 @@ This module provides the router for handling GitHub bot events through webhooks,
 supporting both issue and pull request events.
 """
 
+import hashlib
+import hmac
 import json
 import logging
-from http.server import HTTPServer, BaseHTTPRequestHandler
-from typing import Any, Dict, Optional
-import hmac
-import hashlib
 import threading
+from http.server import BaseHTTPRequestHandler, HTTPServer
+from typing import Any
 
 from sweagent.agent.agents import Agent
 from sweagent.agent.hooks.github import GitHubEventHook
 
 logger = logging.getLogger("swea-gh-bot")
 
+
 class UnsupportedEventError(Exception):
     """Raised when an unsupported event type is received."""
+
     pass
+
 
 class GitHubWebhookHandler(BaseHTTPRequestHandler):
     """Handles GitHub webhook requests.
@@ -92,6 +95,7 @@ class GitHubWebhookHandler(BaseHTTPRequestHandler):
             self.send_response(500)
             self.end_headers()
 
+
 class GitHubBotRouter:
     """Routes GitHub bot events to appropriate handlers.
 
@@ -110,7 +114,7 @@ class GitHubBotRouter:
     SUPPORTED_EVENTS = {
         "issues": ["opened", "edited"],
         "pull_request": ["opened", "synchronize"],
-        "discussion": ["created", "edited"]
+        "discussion": ["created", "edited"],
     }
 
     def __init__(
@@ -124,14 +128,14 @@ class GitHubBotRouter:
         self.agent = agent
         self.webhook_port = webhook_port
         self.webhook_secret = webhook_secret
-        self.server: Optional[HTTPServer] = None
-        self._server_thread: Optional[threading.Thread] = None
+        self.server: HTTPServer | None = None
+        self._server_thread: threading.Thread | None = None
 
         # Initialize GitHub hook
         self.hook = GitHubEventHook(token=token, mode="bot")
         self.agent.hooks.add_hook(self.hook)
 
-    def _validate_event(self, event: Dict[str, Any]) -> None:
+    def _validate_event(self, event: dict[str, Any]) -> None:
         """Validate that the event type and action are supported.
 
         Args:
@@ -146,11 +150,9 @@ class GitHubBotRouter:
 
         action = event.get("action")
         if action not in self.SUPPORTED_EVENTS[event_name]:
-            raise UnsupportedEventError(
-                f"Unsupported action '{action}' for event type '{event_name}'"
-            )
+            raise UnsupportedEventError(f"Unsupported action '{action}' for event type '{event_name}'")
 
-    def _handle_issue(self, event: Dict[str, Any]) -> None:
+    def _handle_issue(self, event: dict[str, Any]) -> None:
         """Handle GitHub issue event.
 
         Args:
@@ -161,7 +163,7 @@ class GitHubBotRouter:
         self.hook.set_current_event(event)
         self.agent.run()
 
-    def _handle_pull_request(self, event: Dict[str, Any]) -> None:
+    def _handle_pull_request(self, event: dict[str, Any]) -> None:
         """Handle GitHub pull request event.
 
         Args:
@@ -172,7 +174,7 @@ class GitHubBotRouter:
         self.hook.set_current_event(event)
         self.agent.run()
 
-    def _handle_discussion(self, event: Dict[str, Any]) -> None:
+    def _handle_discussion(self, event: dict[str, Any]) -> None:
         """Handle GitHub discussion event.
 
         Args:
@@ -183,7 +185,7 @@ class GitHubBotRouter:
         self.hook.set_current_event(event)
         self.agent.run()
 
-    def handle_event(self, event: Dict[str, Any]) -> None:
+    def handle_event(self, event: dict[str, Any]) -> None:
         """Route GitHub event to appropriate handler.
 
         Args:
@@ -200,7 +202,7 @@ class GitHubBotRouter:
         handlers = {
             "issues": self._handle_issue,
             "pull_request": self._handle_pull_request,
-            "discussion": self._handle_discussion
+            "discussion": self._handle_discussion,
         }
 
         handler = handlers[event_name]
@@ -216,9 +218,7 @@ class GitHubBotRouter:
             raise RuntimeError("Webhook server is already running")
 
         def create_handler(*args, **kwargs):
-            return GitHubWebhookHandler(
-                *args, router=self, secret=self.webhook_secret, **kwargs
-            )
+            return GitHubWebhookHandler(*args, router=self, secret=self.webhook_secret, **kwargs)
 
         self.server = HTTPServer(("", self.webhook_port), create_handler)
         logger.info(f"Starting webhook server on port {self.webhook_port}")

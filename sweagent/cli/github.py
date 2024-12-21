@@ -6,12 +6,14 @@ or bot, supporting both modes through a unified interface.
 
 import os
 from pathlib import Path
+
 import click
 import yaml
 
 from sweagent.agent.agents import Agent
 from sweagent.github.action import GitHubActionRouter
 from sweagent.github.bot import GitHubBotRouter
+
 
 def load_config(config_path: str = None) -> dict:
     """Load GitHub integration configuration.
@@ -23,38 +25,22 @@ def load_config(config_path: str = None) -> dict:
         dict: Configuration dictionary
     """
     if not config_path:
-        config_path = os.path.join(
-            os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
-            "config",
-            "github.yaml"
-        )
+        config_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "config", "github.yaml")
 
     with open(config_path) as f:
         return yaml.safe_load(f)
+
 
 @click.group()
 def github():
     """GitHub integration commands."""
     pass
 
+
 @github.command()
-@click.option(
-    "--event-path",
-    type=click.Path(exists=True),
-    required=True,
-    help="Path to GitHub event payload JSON"
-)
-@click.option(
-    "--token",
-    envvar="GITHUB_TOKEN",
-    required=True,
-    help="GitHub API token"
-)
-@click.option(
-    "--config",
-    type=click.Path(exists=True),
-    help="Path to config file"
-)
+@click.option("--event-path", type=click.Path(exists=True), required=True, help="Path to GitHub event payload JSON")
+@click.option("--token", envvar="GITHUB_TOKEN", required=True, help="GitHub API token")
+@click.option("--config", type=click.Path(exists=True), help="Path to config file")
 def action(event_path: str, token: str, config: str = None):
     """Run as GitHub Action.
 
@@ -69,11 +55,7 @@ def action(event_path: str, token: str, config: str = None):
     agent = Agent()
 
     # Create router
-    router = GitHubActionRouter(
-        agent=agent,
-        event_path=Path(event_path),
-        token=token
-    )
+    router = GitHubActionRouter(agent=agent, event_path=Path(event_path), token=token)
 
     try:
         # Handle event
@@ -82,30 +64,12 @@ def action(event_path: str, token: str, config: str = None):
         click.echo(f"Error processing event: {e}", err=True)
         raise click.Abort()
 
+
 @github.command()
-@click.option(
-    "--port",
-    type=int,
-    default=8000,
-    help="Webhook server port"
-)
-@click.option(
-    "--token",
-    envvar="GITHUB_TOKEN",
-    required=True,
-    help="GitHub API token"
-)
-@click.option(
-    "--webhook-secret",
-    envvar="GITHUB_WEBHOOK_SECRET",
-    required=True,
-    help="GitHub webhook secret"
-)
-@click.option(
-    "--config",
-    type=click.Path(exists=True),
-    help="Path to config file"
-)
+@click.option("--port", type=int, default=8000, help="Webhook server port")
+@click.option("--token", envvar="GITHUB_TOKEN", required=True, help="GitHub API token")
+@click.option("--webhook-secret", envvar="GITHUB_WEBHOOK_SECRET", required=True, help="GitHub webhook secret")
+@click.option("--config", type=click.Path(exists=True), help="Path to config file")
 def bot(port: int, token: str, webhook_secret: str, config: str = None):
     """Run as GitHub bot.
 
@@ -123,12 +87,7 @@ def bot(port: int, token: str, webhook_secret: str, config: str = None):
     agent = Agent()
 
     # Create router
-    router = GitHubBotRouter(
-        agent=agent,
-        webhook_port=port,
-        webhook_secret=webhook_secret,
-        token=token
-    )
+    router = GitHubBotRouter(agent=agent, webhook_port=port, webhook_secret=webhook_secret, token=token)
 
     try:
         # Start webhook server
@@ -145,6 +104,7 @@ def bot(port: int, token: str, webhook_secret: str, config: str = None):
     except Exception as e:
         click.echo(f"Error running bot: {e}", err=True)
         raise click.Abort()
+
 
 if __name__ == "__main__":
     github()

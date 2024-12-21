@@ -4,9 +4,9 @@ This module provides GitHub integration support for both Action and bot modes,
 with built-in cost tracking and event handling capabilities.
 """
 
-from typing import Any, Optional, Dict, List, TYPE_CHECKING
-from datetime import datetime
 import logging
+from datetime import datetime
+from typing import TYPE_CHECKING, Any
 
 from ghapi.all import GhApi
 from pydantic import BaseModel
@@ -17,11 +17,13 @@ from sweagent.types import AgentInfo, StepOutput, Trajectory
 if TYPE_CHECKING:
     from sweagent.agent.agents import Agent
 
+
 class GitHubEventStats(BaseModel):
     """Statistics for GitHub event processing"""
+
     event_count: int = 0
     total_cost: float = 0.0
-    last_event_time: Optional[datetime] = None
+    last_event_time: datetime | None = None
     hourly_cost_rate: float = 0.0
 
     def update_stats(self, cost: float) -> None:
@@ -37,6 +39,7 @@ class GitHubEventStats(BaseModel):
                 self.hourly_cost_rate = self.total_cost / hours
 
         self.last_event_time = now
+
 
 class GitHubEventHook(AbstractAgentHook):
     """Hook for handling GitHub events in both Action and bot modes.
@@ -60,7 +63,7 @@ class GitHubEventHook(AbstractAgentHook):
         self.mode = mode
         self.target_hourly_cost = target_hourly_cost
         self.stats = GitHubEventStats()
-        self._current_event: Optional[Dict[str, Any]] = None
+        self._current_event: dict[str, Any] | None = None
         self.logger = logging.getLogger("swea-gh")
 
     def on_init(self, *, agent: "Agent") -> None:
@@ -80,7 +83,7 @@ class GitHubEventHook(AbstractAgentHook):
         """Called when step starts"""
         pass
 
-    def on_model_query(self, *, messages: List[Dict[str, str]], agent: str) -> None:
+    def on_model_query(self, *, messages: list[dict[str, str]], agent: str) -> None:
         """Track costs for GitHub events.
 
         Updates statistics and checks against target hourly cost rate.
@@ -140,8 +143,8 @@ class GitHubEventHook(AbstractAgentHook):
         is_demo: bool = False,
         thought: str = "",
         action: str = "",
-        tool_calls: List[Dict[str, str]] | None = None,
-        tool_call_ids: List[str] | None = None,
+        tool_calls: list[dict[str, str]] | None = None,
+        tool_call_ids: list[str] | None = None,
     ) -> None:
         """Called when a message is added to the query history.
 
@@ -162,7 +165,7 @@ class GitHubEventHook(AbstractAgentHook):
         """Called when tools installation starts"""
         pass
 
-    def set_current_event(self, event: Dict[str, Any]) -> None:
+    def set_current_event(self, event: dict[str, Any]) -> None:
         """Set the current GitHub event being processed.
 
         Args:
