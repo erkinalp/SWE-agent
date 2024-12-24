@@ -5,13 +5,13 @@ These tests verify the integration between SWE-agent's ACI features and
 the MCP server implementation, ensuring all optimizations are preserved.
 """
 
-import pytest
-from pathlib import Path
-import tempfile
 import os
+import tempfile
+from pathlib import Path
+
+import pytest
 
 from sweagent.mcp.integration import ACIMCPServer
-from sweagent.mcp.features import ACIFeatures
 
 
 def test_aci_features():
@@ -36,7 +36,7 @@ def test_linting_with_errors():
 
 def test_file_viewing():
     """Test file viewing optimization."""
-    with tempfile.NamedTemporaryFile(mode='w', delete=False) as f:
+    with tempfile.NamedTemporaryFile(mode="w", delete=False) as f:
         # Create test file with 150 lines
         for i in range(150):
             f.write(f"Line {i}\n")
@@ -85,10 +85,7 @@ def test_tool_execution():
     server.load_commands()
 
     # Find a simple command to test
-    test_tool = next(
-        (tool for tool in server.tools.values() if not tool.parameters),
-        None
-    )
+    test_tool = next((tool for tool in server.tools.values() if not tool.parameters), None)
 
     if test_tool:
         result = server.execute_tool(test_tool.name, {})
@@ -97,7 +94,7 @@ def test_tool_execution():
 
 def test_resource_registration():
     """Test file resource registration and access."""
-    with tempfile.NamedTemporaryFile(mode='w', delete=False) as f:
+    with tempfile.NamedTemporaryFile(mode="w", delete=False) as f:
         f.write("Test content")
         temp_path = f.name
 

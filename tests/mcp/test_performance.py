@@ -5,8 +5,8 @@ These tests verify that the MCP server operations meet performance requirements
 while maintaining SWE-agent's optimizations.
 """
 
-import time
 import tempfile
+import time
 from pathlib import Path
 
 from sweagent.mcp.integration import ACIMCPServer
@@ -22,7 +22,7 @@ def test_search_performance():
 
 def test_file_view_performance():
     """Test file viewing performance with large files."""
-    with tempfile.NamedTemporaryFile(mode='w', delete=False) as f:
+    with tempfile.NamedTemporaryFile(mode="w", delete=False) as f:
         # Create a 1MB test file
         f.write("x" * 1024 * 1024)
         temp_path = f.name

@@ -6,9 +6,8 @@ maintaining compatibility with the existing command system while providing
 a standardized MCP interface.
 """
 
-from typing import Dict, Optional
-
 from sweagent.tools.commands import Command
+
 from .server import MCPTool
 
 
@@ -29,9 +28,7 @@ def command_to_mcp_tool(command: Command) -> MCPTool:
     tool_def = command.get_function_calling_tool()
 
     return MCPTool(
-        name=command.name,
-        description=command.docstring or "",
-        parameters=tool_def["function"]["parameters"]
+        name=command.name, description=command.docstring or "", parameters=tool_def["function"]["parameters"]
     )
 
 
@@ -45,7 +42,7 @@ class ToolRegistry:
 
     def __init__(self):
         """Initialize an empty tool registry."""
-        self._tools: Dict[str, MCPTool] = {}
+        self._tools: dict[str, MCPTool] = {}
 
     def register_command(self, command: Command) -> None:
         """
@@ -57,7 +54,7 @@ class ToolRegistry:
         tool = command_to_mcp_tool(command)
         self._tools[tool.name] = tool
 
-    def get_tool(self, name: str) -> Optional[MCPTool]:
+    def get_tool(self, name: str) -> MCPTool | None:
         """
         Retrieve a tool by name.
 
@@ -69,7 +66,7 @@ class ToolRegistry:
         """
         return self._tools.get(name)
 
-    def list_tools(self) -> Dict[str, MCPTool]:
+    def list_tools(self) -> dict[str, MCPTool]:
         """
         Get all registered tools.
 

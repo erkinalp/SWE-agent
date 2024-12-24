@@ -6,21 +6,15 @@ command conversion, resource management, and protocol operations.
 """
 
 import pytest
-from typing import Dict
 
-from sweagent.tools.commands import Command
-from sweagent.mcp.server import MCPServer, MCPResource, MCPTool
+from sweagent.mcp.server import MCPResource, MCPServer, MCPTool
 from sweagent.mcp.tools import command_to_mcp_tool
+from sweagent.tools.commands import Command
 
 
 def test_command_conversion():
     """Test conversion of Command objects to MCPTool objects."""
-    command = Command(
-        name="test_command",
-        docstring="Test command description",
-        arguments=[],
-        function=lambda: None
-    )
+    command = Command(name="test_command", docstring="Test command description", arguments=[], function=lambda: None)
     tool = command_to_mcp_tool(command)
 
     assert tool.name == command.name
@@ -34,9 +28,9 @@ def test_command_conversion_with_parameters():
         docstring="Test command with parameters",
         arguments=[
             {"name": "arg1", "type": "string", "required": True},
-            {"name": "arg2", "type": "integer", "required": False}
+            {"name": "arg2", "type": "integer", "required": False},
         ],
-        function=lambda arg1, arg2=None: None
+        function=lambda arg1, arg2=None: None,
     )
     tool = command_to_mcp_tool(command)
 
@@ -49,11 +43,7 @@ def test_command_conversion_with_parameters():
 def test_resource_registration():
     """Test resource registration and retrieval."""
     server = MCPServer()
-    resource = MCPResource(
-        uri="file:///test/path",
-        content_type="text/plain",
-        metadata={"type": "file"}
-    )
+    resource = MCPResource(uri="file:///test/path", content_type="text/plain", metadata={"type": "file"})
 
     server.register_resource(resource)
     retrieved = server.get_resource("file:///test/path")
@@ -68,9 +58,7 @@ def test_tool_registration():
     """Test tool registration and retrieval."""
     server = MCPServer()
     tool = MCPTool(
-        name="test_tool",
-        description="Test tool description",
-        parameters={"type": "object", "properties": {}}
+        name="test_tool", description="Test tool description", parameters={"type": "object", "properties": {}}
     )
 
     server.register_tool(tool)
@@ -101,7 +89,7 @@ def test_resource_metadata_validation():
         MCPResource(
             uri="file:///test",
             content_type="",  # Invalid empty content type
-            metadata={"type": "file"}
+            metadata={"type": "file"},
         )
 
 
@@ -111,5 +99,5 @@ def test_tool_parameter_validation():
         MCPTool(
             name="",  # Invalid empty name
             description="Test tool",
-            parameters={"type": "object", "properties": {}}
+            parameters={"type": "object", "properties": {}},
         )
