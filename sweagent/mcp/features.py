@@ -44,7 +44,6 @@ class ACIFeatures:
 
         # Indentation consistency check
         lines = code.split('\n')
-        prev_indent = 0
         for i, line in enumerate(lines, 1):
             if not line.strip():  # Skip empty lines
                 continue
@@ -57,8 +56,6 @@ class ACIFeatures:
             # Check for mixed tabs and spaces
             if '\t' in line[:indent]:
                 errors.append(f"Line {i}: Mixed tabs and spaces in indentation")
-
-            prev_indent = indent
 
         return errors
 
@@ -79,9 +76,11 @@ class ACIFeatures:
             ValueError: If start/end are invalid
         """
         if not Path(path).exists():
-            raise FileNotFoundError(f"File not found: {path}")
+            msg = "File not found: {}".format(path)
+            raise FileNotFoundError(msg)
         if not Path(path).is_file():
-            raise ValueError(f"Not a regular file: {path}")
+            msg = "Not a regular file: {}".format(path)
+            raise ValueError(msg)
         if start < 0:
             raise ValueError("Start line cannot be negative")
 
