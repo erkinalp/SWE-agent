@@ -69,10 +69,10 @@ class FileResource(MCPResource):
             ValueError: If start is negative or length is negative
         """
         if not self.exists:
-            msg = "File not found: {}".format(self.path)
+            msg = f"File not found: {self.path}"
             raise FileNotFoundError(msg)
         if not self.is_file:
-            msg = "Not a regular file: {}".format(self.path)
+            msg = f"Not a regular file: {self.path}"
             raise ValueError(msg)
         if start < 0:
             msg = "Start line cannot be negative"
