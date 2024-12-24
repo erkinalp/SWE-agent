@@ -57,14 +57,14 @@ class ACIMCPServer(MCPServer):
         """
         tool = self.get_tool(name)
         if tool is None:
-            msg = "Tool not found: {}".format(name)
+            msg = f"Tool not found: {name}"
             raise ValueError(msg)
 
         # Find the original command
         commands = get_available_commands()
         command = next((cmd for cmd in commands if cmd.name == name), None)
         if command is None:
-            msg = "Command not found for tool: {}".format(name)
+            msg = f"Command not found for tool: {name}"
             raise ValueError(msg)
 
         # Execute with proper parameter validation
