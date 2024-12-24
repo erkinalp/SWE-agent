@@ -119,9 +119,11 @@ class ACIFeatures:
             ValueError: If path doesn't exist or pattern is invalid
         """
         if not Path(path).exists():
-            raise ValueError(f"Directory not found: {path}")
+            msg = "Directory not found: {}".format(path)
+            raise ValueError(msg)
         if not Path(path).is_dir():
-            raise ValueError(f"Not a directory: {path}")
+            msg = "Not a directory: {}".format(path)
+            raise ValueError(msg)
 
         try:
             # Try as regex first
