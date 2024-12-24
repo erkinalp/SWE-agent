@@ -5,7 +5,6 @@ This module provides concrete resource implementations for the MCP server,
 focusing on file system resources while maintaining SWE-agent's optimizations.
 """
 
-from typing import Dict, Optional
 from pathlib import Path
 
 from .server import MCPResource
@@ -39,8 +38,8 @@ class FileResource(MCPResource):
                 "type": "file",
                 "path": abs_path,
                 "exists": str(Path(abs_path).exists()).lower(),
-                "is_file": str(Path(abs_path).is_file()).lower()
-            }
+                "is_file": str(Path(abs_path).is_file()).lower(),
+            },
         )
         self.path = abs_path
 
@@ -54,7 +53,7 @@ class FileResource(MCPResource):
         """Check if the path points to a regular file."""
         return Path(self.path).is_file()
 
-    def read_chunk(self, start: int = 0, length: Optional[int] = None) -> str:
+    def read_chunk(self, start: int = 0, length: int | None = None) -> str:
         """
         Read a chunk of the file, maintaining SWE-agent's viewing optimization.
 
@@ -78,7 +77,7 @@ class FileResource(MCPResource):
         if length is not None and length < 0:
             raise ValueError("Length cannot be negative")
 
-        with open(self.path, 'r') as f:
+        with open(self.path) as f:
             # Skip lines until start
             for _ in range(start):
                 next(f, None)
@@ -94,4 +93,4 @@ class FileResource(MCPResource):
                     break
                 lines.append(line)
 
-            return ''.join(lines)
+            return "".join(lines)

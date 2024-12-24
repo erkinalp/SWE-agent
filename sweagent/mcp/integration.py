@@ -6,13 +6,11 @@ ACI features and the MCP server interface, maintaining all optimizations
 while providing a standardized protocol interface.
 """
 
-from typing import Dict, List, Optional
-from pathlib import Path
+from sweagent.tools.commands import get_available_commands
 
-from sweagent.tools.commands import Command, get_available_commands
-from .server import MCPServer, MCPTool
 from .features import ACIFeatures
 from .resources import FileResource
+from .server import MCPServer
 from .tools import command_to_mcp_tool
 
 
@@ -43,7 +41,7 @@ class ACIMCPServer(MCPServer):
             tool = command_to_mcp_tool(command)
             self.register_tool(tool)
 
-    def execute_tool(self, name: str, parameters: Dict) -> Dict:
+    def execute_tool(self, name: str, parameters: dict) -> dict:
         """
         Execute an MCP tool with the given parameters.
 
@@ -87,7 +85,7 @@ class ACIMCPServer(MCPServer):
         self.register_resource(resource)
         return resource
 
-    def lint_code(self, code: str) -> List[str]:
+    def lint_code(self, code: str) -> list[str]:
         """
         Perform syntactic linting using ACI features.
 
@@ -99,7 +97,7 @@ class ACIMCPServer(MCPServer):
         """
         return self.features.lint_code(code)
 
-    def view_file(self, uri: str, start: int = 0, end: Optional[int] = None) -> str:
+    def view_file(self, uri: str, start: int = 0, end: int | None = None) -> str:
         """
         View file contents using ACI optimizations.
 
@@ -120,7 +118,7 @@ class ACIMCPServer(MCPServer):
         path = uri[7:]  # Remove file:// prefix
         return self.features.view_file(path, start, end)
 
-    def search_directory(self, pattern: str, path: str = '.') -> List[str]:
+    def search_directory(self, pattern: str, path: str = ".") -> list[str]:
         """
         Perform directory search using ACI optimizations.
 

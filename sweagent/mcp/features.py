@@ -6,11 +6,8 @@ the MCP server context, maintaining the efficiency and usability of the
 original features while providing a standardized interface.
 """
 
-from typing import List, Optional
 import re
 from pathlib import Path
-
-from sweagent.tools.commands import Command
 
 
 class ACIFeatures:
@@ -24,7 +21,7 @@ class ACIFeatures:
     - Efficient directory searching
     """
 
-    def lint_code(self, code: str) -> List[str]:
+    def lint_code(self, code: str) -> list[str]:
         """
         Perform syntactic linting on code before edit commands.
 
@@ -38,7 +35,7 @@ class ACIFeatures:
 
         # Basic syntax checks
         try:
-            compile(code, '<string>', 'exec')
+            compile(code, "<string>", "exec")
         except SyntaxError as e:
             errors.append(f"Syntax error at line {e.lineno}: {e.msg}")
 
@@ -54,12 +51,12 @@ class ACIFeatures:
                 errors.append(f"Line {i}: Indentation must be a multiple of 4 spaces")
 
             # Check for mixed tabs and spaces
-            if '\t' in line[:indent]:
+            if "\t" in line[:indent]:
                 errors.append(f"Line {i}: Mixed tabs and spaces in indentation")
 
         return errors
 
-    def view_file(self, path: str, start: int = 0, end: Optional[int] = None) -> str:
+    def view_file(self, path: str, start: int = 0, end: int | None = None) -> str:
         """
         View file contents with 100-line optimization.
 
@@ -90,7 +87,7 @@ class ACIFeatures:
         elif end <= start:
             raise ValueError("End line must be greater than start line")
 
-        with open(path, 'r') as f:
+        with open(path) as f:
             # Skip lines until start
             for _ in range(start):
                 next(f, None)
@@ -103,9 +100,9 @@ class ACIFeatures:
                     break
                 lines.append(line)
 
-            return ''.join(lines)
+            return "".join(lines)
 
-    def search_directory(self, pattern: str, path: str = '.') -> List[str]:
+    def search_directory(self, pattern: str, path: str = ".") -> list[str]:
         """
         Perform optimized directory search.
 
@@ -137,7 +134,7 @@ class ACIFeatures:
 
         if is_regex:
             # Regex search
-            for file_path in base_path.rglob('*'):
+            for file_path in base_path.rglob("*"):
                 if regex.search(str(file_path.relative_to(base_path))):
                     matches.append(str(file_path))
         else:

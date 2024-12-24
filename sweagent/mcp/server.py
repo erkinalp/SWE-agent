@@ -6,7 +6,6 @@ which standardizes how AI agents interact with data sources. The implementation 
 on maintaining SWE-agent's existing optimizations while providing a standard interface.
 """
 
-from typing import Dict, List, Optional
 from pydantic import BaseModel, Field
 
 
@@ -22,12 +21,10 @@ class MCPResource(BaseModel):
         content_type: MIME type of the resource content
         metadata: Additional properties of the resource
     """
+
     uri: str = Field(..., description="Unique identifier for the resource")
     content_type: str = Field(..., description="MIME type of the resource content")
-    metadata: Dict[str, str] = Field(
-        default_factory=dict,
-        description="Additional properties of the resource"
-    )
+    metadata: dict[str, str] = Field(default_factory=dict, description="Additional properties of the resource")
 
 
 class MCPTool(BaseModel):
@@ -42,12 +39,10 @@ class MCPTool(BaseModel):
         description: Human-readable description of the tool's purpose
         parameters: Schema of the tool's parameters
     """
+
     name: str = Field(..., description="Unique name of the tool")
     description: str = Field(..., description="Human-readable description of the tool")
-    parameters: Dict[str, dict] = Field(
-        default_factory=dict,
-        description="Schema of the tool's parameters"
-    )
+    parameters: dict[str, dict] = Field(default_factory=dict, description="Schema of the tool's parameters")
 
 
 class MCPServer:
@@ -61,8 +56,8 @@ class MCPServer:
 
     def __init__(self):
         """Initialize an empty MCP server instance."""
-        self.resources: Dict[str, MCPResource] = {}
-        self.tools: Dict[str, MCPTool] = {}
+        self.resources: dict[str, MCPResource] = {}
+        self.tools: dict[str, MCPTool] = {}
 
     def register_resource(self, resource: MCPResource) -> None:
         """
@@ -82,7 +77,7 @@ class MCPServer:
         """
         self.tools[tool.name] = tool
 
-    def get_resource(self, uri: str) -> Optional[MCPResource]:
+    def get_resource(self, uri: str) -> MCPResource | None:
         """
         Retrieve a resource by its URI.
 
@@ -94,7 +89,7 @@ class MCPServer:
         """
         return self.resources.get(uri)
 
-    def get_tool(self, name: str) -> Optional[MCPTool]:
+    def get_tool(self, name: str) -> MCPTool | None:
         """
         Retrieve a tool by its name.
 
