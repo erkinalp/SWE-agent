@@ -40,7 +40,7 @@ class ACIFeatures:
             errors.append(f"Syntax error at line {e.lineno}: {e.msg}")
 
         # Indentation consistency check
-        lines = code.split('\n')
+        lines = code.split("\n")
         for i, line in enumerate(lines, 1):
             if not line.strip():  # Skip empty lines
                 continue
@@ -73,10 +73,10 @@ class ACIFeatures:
             ValueError: If start/end are invalid
         """
         if not Path(path).exists():
-            msg = "File not found: {}".format(path)
+            msg = f"File not found: {path}"
             raise FileNotFoundError(msg)
         if not Path(path).is_file():
-            msg = "Not a regular file: {}".format(path)
+            msg = f"Not a regular file: {path}"
             raise ValueError(msg)
         if start < 0:
             raise ValueError("Start line cannot be negative")
