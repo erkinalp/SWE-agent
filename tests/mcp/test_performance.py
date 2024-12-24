@@ -16,7 +16,7 @@ def test_search_performance():
     """Test directory search performance meets requirements."""
     server = ACIMCPServer()
     start_time = time.time()
-    results = server.features.search_directory("test")
+    server.features.search_directory("test")  # Remove unused results variable
     assert time.time() - start_time < 1.0  # Max 1s for search
 
 
@@ -32,7 +32,7 @@ def test_file_view_performance():
         resource = server.register_file(temp_path)
 
         start_time = time.time()
-        content = server.view_file(resource.uri)
+        server.view_file(resource.uri)  # Remove unused content variable
         assert time.time() - start_time < 0.5  # Max 0.5s for viewing
     finally:
         Path(temp_path).unlink()
@@ -45,7 +45,7 @@ def test_linting_performance():
 
     server = ACIMCPServer()
     start_time = time.time()
-    errors = server.lint_code(code)
+    server.lint_code(code)  # Remove unused errors variable
     assert time.time() - start_time < 0.5  # Max 0.5s for linting
 
 

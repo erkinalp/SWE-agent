@@ -57,13 +57,15 @@ class ACIMCPServer(MCPServer):
         """
         tool = self.get_tool(name)
         if tool is None:
-            raise ValueError(f"Tool not found: {name}")
+            msg = "Tool not found: {}".format(name)
+            raise ValueError(msg)
 
         # Find the original command
         commands = get_available_commands()
         command = next((cmd for cmd in commands if cmd.name == name), None)
         if command is None:
-            raise ValueError(f"Command not found for tool: {name}")
+            msg = "Command not found for tool: {}".format(name)
+            raise ValueError(msg)
 
         # Execute with proper parameter validation
         return command.execute(**parameters)
@@ -113,7 +115,8 @@ class ACIMCPServer(MCPServer):
             ValueError: If URI is invalid or resource not found
         """
         if not uri.startswith("file://"):
-            raise ValueError("Only file:// URIs are supported")
+            msg = "Only file:// URIs are supported"
+            raise ValueError(msg)
 
         path = uri[7:]  # Remove file:// prefix
         return self.features.view_file(path, start, end)

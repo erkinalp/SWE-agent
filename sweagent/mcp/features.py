@@ -79,13 +79,15 @@ class ACIFeatures:
             msg = "Not a regular file: {}".format(path)
             raise ValueError(msg)
         if start < 0:
-            raise ValueError("Start line cannot be negative")
+            msg = "Start line cannot be negative"
+            raise ValueError(msg)
 
         # Default to 100 lines if end is not specified
         if end is None:
             end = start + 100
         elif end <= start:
-            raise ValueError("End line must be greater than start line")
+            msg = "End line must be greater than start line"
+            raise ValueError(msg)
 
         with open(path) as f:
             # Skip lines until start
