@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -37,7 +37,7 @@
   
   
   
-  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-12 6 6-6-6-6-1.4 1.4 4.6 4.6-4.6 4.6z"/></svg>');}</style>
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010m-12%206%206-6-6-6-1.4%201.4%204.6%204.6-4.6%204.6z%22/%3E%3C/svg%3E');}</style>
 
 
     
@@ -65,6 +65,16 @@
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-SG2NC1GDRD"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-SG2NC1GDRD",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-SG2NC1GDRD",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
     
     
@@ -113,7 +123,7 @@
               </button>
             
             
-This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/installation/migration/">New features + migration guide.</a>
+SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-agent.com/latest/installation/migration/">New features + migration guide.</a>
 
           </div>
           
@@ -201,11 +211,13 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -237,13 +249,14 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
         <a href="https://github.com/SWE-agent/SWE-agent" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     SWE-agent/SWE-agent
@@ -263,11 +276,13 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../.." class="md-tabs__link">
           
+  
   
     
   
@@ -283,11 +298,13 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../usage/" class="md-tabs__link">
           
+  
   
     
   
@@ -302,6 +319,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         
   
   
+  
     
   
   
@@ -310,6 +328,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../" class="md-tabs__link">
           
+  
   
     
   
@@ -361,7 +380,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="https://github.com/SWE-agent/SWE-agent" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     SWE-agent/SWE-agent
@@ -392,6 +411,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
       
     
@@ -403,13 +423,14 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../.." class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     Getting Started
+    
   </span>
   
 
@@ -458,6 +479,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
       
     
@@ -469,13 +491,14 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../../installation/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     Installation
+    
   </span>
   
 
@@ -507,8 +530,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../installation/source/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     From source
+    
   </span>
   
 
@@ -528,8 +553,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../installation/codespaces/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     In browser
+    
   </span>
   
 
@@ -549,8 +576,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../installation/keys/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Models and keys
+    
   </span>
   
 
@@ -570,8 +599,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../installation/migration/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     1.0 migration
+    
   </span>
   
 
@@ -591,8 +622,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../installation/tips/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Troubleshooting
+    
   </span>
   
 
@@ -612,8 +645,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../installation/changelog/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Changelog
+    
   </span>
   
 
@@ -652,6 +687,9 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
         
       
+        
+      
+    
     
     
       
@@ -668,8 +706,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
           <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Tutorials
+    
   </span>
   
 
@@ -693,8 +733,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../usage/hello_world/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Hello world
+    
   </span>
   
 
@@ -714,8 +756,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../usage/cl_tutorial/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Command line basics
+    
   </span>
   
 
@@ -735,8 +779,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../usage/coding_challenges/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Solving coding challenges
+    
   </span>
   
 
@@ -756,8 +802,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../usage/inspector/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Trajectory inspector
+    
   </span>
   
 
@@ -777,8 +825,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../usage/batch_mode/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Batch mode
+    
   </span>
   
 
@@ -795,11 +845,36 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   
   
     <li class="md-nav__item">
-      <a href="../../usage/benchmarking/" class="md-nav__link">
+      <a href="../../usage/competitive_runs/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Benchmarking
+    Competitive runs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/whats_next/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What's next?
+    
   </span>
   
 
@@ -827,8 +902,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../faq/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FAQ
+    
   </span>
   
 
@@ -866,6 +943,9 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
         
       
+        
+      
+    
     
     
       
@@ -879,13 +959,14 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../../usage/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     User Guides
+    
   </span>
   
 
@@ -926,6 +1007,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
       
     
@@ -937,13 +1019,14 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../../background/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     Project overview
+    
   </span>
   
 
@@ -975,8 +1058,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../background/architecture/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Architecture
+    
   </span>
   
 
@@ -996,8 +1081,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../background/aci/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Agent tools
+    
   </span>
   
 
@@ -1022,11 +1109,36 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   
   
     <li class="md-nav__item">
+      <a href="../../usage/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Command line interface
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../usage/trajectories/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Output files
+    
   </span>
   
 
@@ -1055,6 +1167,13 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
         
       
+        
+      
+        
+      
+        
+      
+    
     
     
       
@@ -1065,30 +1184,31 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
         
-          
           
           <div class="md-nav__link md-nav__container">
             <a href="../../config/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     Configuration
+    
   </span>
   
 
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             Configuration
           </label>
@@ -1106,8 +1226,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../config/config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Config files
+    
   </span>
   
 
@@ -1127,8 +1249,33 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../config/templates/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Templates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Models
+    
   </span>
   
 
@@ -1148,8 +1295,56 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../config/demonstrations/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Demonstrations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/environments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Environments
+    
   </span>
   
 
@@ -1182,6 +1377,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
       
     
@@ -1190,22 +1386,24 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
         
           
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Development
+    
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             Development
           </label>
@@ -1221,8 +1419,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../dev/contribute/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Contribution guide
+    
   </span>
   
 
@@ -1242,8 +1442,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../dev/formatting_conflicts/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Formatting conflicts
+    
   </span>
   
 
@@ -1297,6 +1499,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
         
         
@@ -1311,13 +1514,14 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     API Reference
+    
   </span>
   
 
@@ -1354,6 +1558,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
       
     
@@ -1368,8 +1573,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Run config
+    
   </span>
   
 
@@ -1393,8 +1600,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../run_single_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Run single
+    
   </span>
   
 
@@ -1414,8 +1623,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../run_batch_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Run batch
+    
   </span>
   
 
@@ -1450,6 +1661,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
       
     
@@ -1464,8 +1676,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Instance config
+    
   </span>
   
 
@@ -1489,8 +1703,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../problem_statements/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Problem statements
+    
   </span>
   
 
@@ -1510,8 +1726,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../repo/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Repository
+    
   </span>
   
 
@@ -1531,8 +1749,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../batch_instances/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Batch instances
+    
   </span>
   
 
@@ -1571,6 +1791,9 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
         
       
+        
+      
+    
     
     
       
@@ -1587,8 +1810,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
           <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Agent config
+    
   </span>
   
 
@@ -1612,8 +1837,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../agent_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Agent config
+    
   </span>
   
 
@@ -1633,8 +1860,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../model_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Model config
+    
   </span>
   
 
@@ -1654,8 +1883,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../template_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Templates
+    
   </span>
   
 
@@ -1684,8 +1915,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
     Tools
+    
   </span>
   
 
@@ -1695,8 +1928,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
     Tools
+    
   </span>
   
 
@@ -1809,6 +2044,15 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
 </li>
         
           <li class="md-nav__item">
+  <a href="#sweagent.tools.tools.ToolConfig.max_consecutive_execution_timeouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;max_consecutive_execution_timeouts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sweagent.tools.tools.ToolConfig.multi_line_command_endings" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;multi_line_command_endings
@@ -1821,6 +2065,15 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   <a href="#sweagent.tools.tools.ToolConfig.parse_function" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;parse_function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.tools.tools.ToolConfig.registry_variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;registry_variables
     </span>
   </a>
   
@@ -1866,6 +2119,15 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   <a href="#sweagent.tools.tools.ToolConfig.tools" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.tools.tools.ToolConfig.total_execution_timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;total_execution_timeout
     </span>
   </a>
   
@@ -2024,8 +2286,33 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../history_processor_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     History processors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parsers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Action parsers
+    
   </span>
   
 
@@ -2053,8 +2340,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../env_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Environment config
+    
   </span>
   
 
@@ -2074,8 +2363,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../bundle_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Tool bundle config
+    
   </span>
   
 
@@ -2102,6 +2393,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
       
     
@@ -2116,8 +2408,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
           <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Classes
+    
   </span>
   
 
@@ -2141,8 +2435,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../agent/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Agent class
+    
   </span>
   
 
@@ -2162,8 +2458,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../env/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Environment class
+    
   </span>
   
 
@@ -2183,8 +2481,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../exceptions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Exceptions
+    
   </span>
   
 
@@ -2327,6 +2627,15 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
 </li>
         
           <li class="md-nav__item">
+  <a href="#sweagent.tools.tools.ToolConfig.max_consecutive_execution_timeouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;max_consecutive_execution_timeouts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sweagent.tools.tools.ToolConfig.multi_line_command_endings" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;multi_line_command_endings
@@ -2339,6 +2648,15 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   <a href="#sweagent.tools.tools.ToolConfig.parse_function" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;parse_function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.tools.tools.ToolConfig.registry_variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;registry_variables
     </span>
   </a>
   
@@ -2384,6 +2702,15 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   <a href="#sweagent.tools.tools.ToolConfig.tools" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.tools.tools.ToolConfig.total_execution_timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;total_execution_timeout
     </span>
   </a>
   
@@ -2537,6 +2864,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
                 
                   
 
+
   
     <a href="https://github.com/SWE-agent/SWE-agent/edit/main/docs/reference/tools_config.md" title="Edit this page" class="md-content__button md-icon">
       
@@ -2548,6 +2876,11 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
 
 <h1 id="tool-configuration">Tool configuration</h1>
 <p>This shows how to configure tools for SWE-agent.</p>
+<div class="admonition note">
+<p class="admonition-title">Tool configuration</p>
+<p>This is the page for configuring tools for SWE-agent, not for setting up the tools that are being used for the agent.
+For the latter, see <a href="../bundle_config/">tool bundles</a>.</p>
+</div>
 
 
 <div class="doc doc-object doc-class">
@@ -2574,72 +2907,163 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         <p>Fields:</p>
         <ul>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.filter" href="#sweagent.tools.tools.ToolConfig.filter">filter</a></code>
-                (<code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolFilterConfig" href="#sweagent.tools.tools.ToolFilterConfig">ToolFilterConfig</a></code>)
+              <code><a class="autorefs autorefs-internal" title="            filter
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolConfig.filter)" href="#sweagent.tools.tools.ToolConfig.filter">filter</a></code>
+                (<code><a class="autorefs autorefs-internal" title="            sweagent.tools.tools.ToolFilterConfig
+
+
+  
+      pydantic-model
+  " href="#sweagent.tools.tools.ToolFilterConfig">ToolFilterConfig</a></code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.bundles" href="#sweagent.tools.tools.ToolConfig.bundles">bundles</a></code>
-                (<code>list[<a class="autorefs autorefs-internal" title="sweagent.tools.bundle.Bundle" href="#sweagent.tools.bundle.Bundle">Bundle</a>]</code>)
+              <code><a class="autorefs autorefs-internal" title="            bundles
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolConfig.bundles)" href="#sweagent.tools.tools.ToolConfig.bundles">bundles</a></code>
+                (<code><span title="list">list</span>[<a class="autorefs autorefs-internal" title="            sweagent.tools.bundle.Bundle
+
+
+  
+      pydantic-model
+  " href="#sweagent.tools.bundle.Bundle">Bundle</a>]</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.env_variables" href="#sweagent.tools.tools.ToolConfig.env_variables">env_variables</a></code>
-                (<code>dict[str, <span title="typing.Any">Any</span>]</code>)
+              <code><a class="autorefs autorefs-internal" title="            env_variables
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolConfig.env_variables)" href="#sweagent.tools.tools.ToolConfig.env_variables">env_variables</a></code>
+                (<code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.submit_command" href="#sweagent.tools.tools.ToolConfig.submit_command">submit_command</a></code>
-                (<code>str</code>)
+              <code><a class="autorefs autorefs-internal" title="            registry_variables
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolConfig.registry_variables)" href="#sweagent.tools.tools.ToolConfig.registry_variables">registry_variables</a></code>
+                (<code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.parse_function" href="#sweagent.tools.tools.ToolConfig.parse_function">parse_function</a></code>
-                (<code><span title="sweagent.tools.parsing.ParseFunction">ParseFunction</span></code>)
+              <code><a class="autorefs autorefs-internal" title="            submit_command
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolConfig.submit_command)" href="#sweagent.tools.tools.ToolConfig.submit_command">submit_command</a></code>
+                (<code><span title="str">str</span></code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.enable_bash_tool" href="#sweagent.tools.tools.ToolConfig.enable_bash_tool">enable_bash_tool</a></code>
-                (<code>bool</code>)
+              <code><a class="autorefs autorefs-internal" title="            parse_function
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolConfig.parse_function)" href="#sweagent.tools.tools.ToolConfig.parse_function">parse_function</a></code>
+                (<code><a class="autorefs autorefs-internal" title="            ParseFunction
+
+
+  
+      module-attribute
+   (sweagent.tools.parsing.ParseFunction)" href="../parsers/#sweagent.tools.parsing.ParseFunction">ParseFunction</a></code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.format_error_template" href="#sweagent.tools.tools.ToolConfig.format_error_template">format_error_template</a></code>
-                (<code>str</code>)
+              <code><a class="autorefs autorefs-internal" title="            enable_bash_tool
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolConfig.enable_bash_tool)" href="#sweagent.tools.tools.ToolConfig.enable_bash_tool">enable_bash_tool</a></code>
+                (<code><span title="bool">bool</span></code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.command_docs" href="#sweagent.tools.tools.ToolConfig.command_docs">command_docs</a></code>
-                (<code>str</code>)
+              <code><a class="autorefs autorefs-internal" title="            format_error_template
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolConfig.format_error_template)" href="#sweagent.tools.tools.ToolConfig.format_error_template">format_error_template</a></code>
+                (<code><span title="str">str</span></code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.multi_line_command_endings" href="#sweagent.tools.tools.ToolConfig.multi_line_command_endings">multi_line_command_endings</a></code>
-                (<code>dict[str, str]</code>)
+              <code><a class="autorefs autorefs-internal" title="            command_docs
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolConfig.command_docs)" href="#sweagent.tools.tools.ToolConfig.command_docs">command_docs</a></code>
+                (<code><span title="str">str</span></code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.submit_command_end_name" href="#sweagent.tools.tools.ToolConfig.submit_command_end_name">submit_command_end_name</a></code>
-                (<code>str | None</code>)
+              <code><a class="autorefs autorefs-internal" title="            multi_line_command_endings
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolConfig.multi_line_command_endings)" href="#sweagent.tools.tools.ToolConfig.multi_line_command_endings">multi_line_command_endings</a></code>
+                (<code><span title="dict">dict</span>[<span title="str">str</span>, <span title="str">str</span>]</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.reset_commands" href="#sweagent.tools.tools.ToolConfig.reset_commands">reset_commands</a></code>
-                (<code>list[str | list[str]]</code>)
+              <code><a class="autorefs autorefs-internal" title="            submit_command_end_name
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolConfig.submit_command_end_name)" href="#sweagent.tools.tools.ToolConfig.submit_command_end_name">submit_command_end_name</a></code>
+                (<code><span title="str">str</span> | None</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.execution_timeout" href="#sweagent.tools.tools.ToolConfig.execution_timeout">execution_timeout</a></code>
-                (<code>int</code>)
+              <code><a class="autorefs autorefs-internal" title="            reset_commands
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolConfig.reset_commands)" href="#sweagent.tools.tools.ToolConfig.reset_commands">reset_commands</a></code>
+                (<code><span title="list">list</span>[<span title="str">str</span> | <span title="list">list</span>[<span title="str">str</span>]]</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.install_timeout" href="#sweagent.tools.tools.ToolConfig.install_timeout">install_timeout</a></code>
-                (<code>int</code>)
+              <code><a class="autorefs autorefs-internal" title="            execution_timeout
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolConfig.execution_timeout)" href="#sweagent.tools.tools.ToolConfig.execution_timeout">execution_timeout</a></code>
+                (<code><span title="int">int</span></code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.use_function_calling" href="#sweagent.tools.tools.ToolConfig.use_function_calling">use_function_calling</a></code>
-                (<code>bool</code>)
+              <code><a class="autorefs autorefs-internal" title="            install_timeout
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolConfig.install_timeout)" href="#sweagent.tools.tools.ToolConfig.install_timeout">install_timeout</a></code>
+                (<code><span title="int">int</span></code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.state_commands" href="#sweagent.tools.tools.ToolConfig.state_commands">state_commands</a></code>
-                (<code>list[str]</code>)
+              <code><a class="autorefs autorefs-internal" title="            total_execution_timeout
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolConfig.total_execution_timeout)" href="#sweagent.tools.tools.ToolConfig.total_execution_timeout">total_execution_timeout</a></code>
+                (<code><span title="int">int</span></code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.commands" href="#sweagent.tools.tools.ToolConfig.commands">commands</a></code>
-                (<code>list[<a class="autorefs autorefs-internal" title="sweagent.tools.commands.Command" href="../bundle_config/#sweagent.tools.commands.Command">Command</a>]</code>)
-            </li>
-            <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolConfig.tools" href="#sweagent.tools.tools.ToolConfig.tools">tools</a></code>
-                (<code>list[dict]</code>)
+              <code><a class="autorefs autorefs-internal" title="            max_consecutive_execution_timeouts
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolConfig.max_consecutive_execution_timeouts)" href="#sweagent.tools.tools.ToolConfig.max_consecutive_execution_timeouts">max_consecutive_execution_timeouts</a></code>
+                (<code><span title="int">int</span></code>)
             </li>
         </ul>
 
@@ -2667,10 +3091,16 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">bundles</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="sweagent.tools.bundle.Bundle" href="#sweagent.tools.bundle.Bundle">Bundle</a></span><span class="p">]</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">bundles</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="            sweagent.tools.bundle.Bundle
+
+
+  
+      pydantic-model
+  " href="#sweagent.tools.bundle.Bundle">Bundle</a></span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
     </div>
 
 </div>
@@ -2688,10 +3118,11 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">command_docs</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="kc">None</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">command_docs</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="kc">None</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
     </div>
 
 </div>
@@ -2705,16 +3136,23 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
 
 
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+      <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">commands</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="sweagent.tools.commands.Command" href="../bundle_config/#sweagent.tools.commands.Command">Command</a></span><span class="p">]</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">commands</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="            sweagent.tools.commands.Command
+
+
+  
+      pydantic-model
+  " href="../bundle_config/#sweagent.tools.commands.Command">Command</a></span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Read command files and return parsed command objects</p>
+
     </div>
 
 </div>
@@ -2732,10 +3170,11 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">enable_bash_tool</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">enable_bash_tool</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">True</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
     </div>
 
 </div>
@@ -2753,13 +3192,14 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">env_variables</span><span class="p">:</span> <span class="n">dict</span><span class="p">[</span><span class="n">str</span><span class="p">,</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">env_variables</span><span class="p">:</span> <span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Shorthand to set environment variables for the tools, effectively
 equivalent to adding <code>export VARNAME=value</code> to the <code>reset_commands</code>.</p>
+
     </div>
 
 </div>
@@ -2777,12 +3217,13 @@ equivalent to adding <code>export VARNAME=value</code> to the <code>reset_comman
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">execution_timeout</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">30</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">execution_timeout</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="mi">30</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Timeout for executing commands in the environment</p>
+
     </div>
 
 </div>
@@ -2800,10 +3241,16 @@ equivalent to adding <code>export VARNAME=value</code> to the <code>reset_comman
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nb">filter</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolFilterConfig" href="#sweagent.tools.tools.ToolFilterConfig">ToolFilterConfig</a></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nb">filter</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="            sweagent.tools.tools.ToolFilterConfig
+
+
+  
+      pydantic-model
+  " href="#sweagent.tools.tools.ToolFilterConfig">ToolFilterConfig</a></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
     </div>
 
 </div>
@@ -2821,12 +3268,13 @@ equivalent to adding <code>export VARNAME=value</code> to the <code>reset_comman
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">format_error_template</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="kc">None</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">format_error_template</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="kc">None</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Defaults to format_error_template in ParseFunction</p>
+
     </div>
 
 </div>
@@ -2844,12 +3292,37 @@ equivalent to adding <code>export VARNAME=value</code> to the <code>reset_comman
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">install_timeout</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">300</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">install_timeout</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="mi">300</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Timeout used for each of the installation commands</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="sweagent.tools.tools.ToolConfig.max_consecutive_execution_timeouts" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">max_consecutive_execution_timeouts</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">max_consecutive_execution_timeouts</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="mi">3</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Maximum number of consecutive execution timeouts before the agent exits.</p>
+
     </div>
 
 </div>
@@ -2867,10 +3340,11 @@ equivalent to adding <code>export VARNAME=value</code> to the <code>reset_comman
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">multi_line_command_endings</span><span class="p">:</span> <span class="n">dict</span><span class="p">[</span><span class="n">str</span><span class="p">,</span> <span class="n">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">multi_line_command_endings</span><span class="p">:</span> <span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
     </div>
 
 </div>
@@ -2888,10 +3362,40 @@ equivalent to adding <code>export VARNAME=value</code> to the <code>reset_comman
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">parse_function</span><span class="p">:</span> <span class="n"><span title="sweagent.tools.parsing.ParseFunction">ParseFunction</span></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">parse_function</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="            ParseFunction
+
+
+  
+      module-attribute
+   (sweagent.tools.parsing.ParseFunction)" href="../parsers/#sweagent.tools.parsing.ParseFunction">ParseFunction</a></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="sweagent.tools.tools.ToolConfig.registry_variables" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">registry_variables</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">registry_variables</span><span class="p">:</span> <span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Populate the registry with these variables. Will be written out as json in the registry file.</p>
+
     </div>
 
 </div>
@@ -2909,13 +3413,14 @@ equivalent to adding <code>export VARNAME=value</code> to the <code>reset_comman
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">reset_commands</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span> <span class="o">|</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[]</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">reset_commands</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span> <span class="o">|</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]]</span> <span class="o">=</span> <span class="p">[]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Commands to reset the environment. They will also be called when we start the environment.
 Unlike <code>install_commands</code>, these commands are part of the environment state.</p>
+
     </div>
 
 </div>
@@ -2929,14 +3434,16 @@ Unlike <code>install_commands</code>, these commands are part of the environment
 
 
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+      <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">state_commands</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span><span class="p">]</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">state_commands</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
     </div>
 
 </div>
@@ -2954,10 +3461,11 @@ Unlike <code>install_commands</code>, these commands are part of the environment
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">submit_command</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="s1">&#39;submit&#39;</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">submit_command</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="s1">&#39;submit&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
     </div>
 
 </div>
@@ -2975,13 +3483,14 @@ Unlike <code>install_commands</code>, these commands are part of the environment
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">submit_command_end_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">submit_command_end_name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Commands to install dependencies and tools.
 These commands are executed in a subprocess and are not part of the environment state.</p>
+
     </div>
 
 </div>
@@ -2995,14 +3504,41 @@ These commands are executed in a subprocess and are not part of the environment 
 
 
   <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">tools</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="dict">dict</span></span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="sweagent.tools.tools.ToolConfig.total_execution_timeout" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">total_execution_timeout</span>
+
+
+  <span class="doc doc-labels">
       <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">tools</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n">dict</span><span class="p">]</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">total_execution_timeout</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="mi">1800</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
+        <p>Timeout for executing all commands in the environment.
+Note: Does not interrupt running commands, but will stop the agent for the next step.</p>
+
     </div>
 
 </div>
@@ -3016,14 +3552,16 @@ These commands are executed in a subprocess and are not part of the environment 
 
 
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+      <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">use_function_calling</span><span class="p">:</span> <span class="n">bool</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">use_function_calling</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
     </div>
 
 </div>
@@ -3062,20 +3600,40 @@ These commands are executed in a subprocess and are not part of the environment 
         <p>Fields:</p>
         <ul>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolFilterConfig.blocklist_error_template" href="#sweagent.tools.tools.ToolFilterConfig.blocklist_error_template">blocklist_error_template</a></code>
-                (<code>str</code>)
+              <code><a class="autorefs autorefs-internal" title="            blocklist_error_template
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolFilterConfig.blocklist_error_template)" href="#sweagent.tools.tools.ToolFilterConfig.blocklist_error_template">blocklist_error_template</a></code>
+                (<code><span title="str">str</span></code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolFilterConfig.blocklist" href="#sweagent.tools.tools.ToolFilterConfig.blocklist">blocklist</a></code>
-                (<code>list[str]</code>)
+              <code><a class="autorefs autorefs-internal" title="            blocklist
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolFilterConfig.blocklist)" href="#sweagent.tools.tools.ToolFilterConfig.blocklist">blocklist</a></code>
+                (<code><span title="list">list</span>[<span title="str">str</span>]</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolFilterConfig.blocklist_standalone" href="#sweagent.tools.tools.ToolFilterConfig.blocklist_standalone">blocklist_standalone</a></code>
-                (<code>list[str]</code>)
+              <code><a class="autorefs autorefs-internal" title="            blocklist_standalone
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolFilterConfig.blocklist_standalone)" href="#sweagent.tools.tools.ToolFilterConfig.blocklist_standalone">blocklist_standalone</a></code>
+                (<code><span title="list">list</span>[<span title="str">str</span>]</code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.tools.ToolFilterConfig.block_unless_regex" href="#sweagent.tools.tools.ToolFilterConfig.block_unless_regex">block_unless_regex</a></code>
-                (<code>dict[str, str]</code>)
+              <code><a class="autorefs autorefs-internal" title="            block_unless_regex
+
+
+  
+      pydantic-field
+   (sweagent.tools.tools.ToolFilterConfig.block_unless_regex)" href="#sweagent.tools.tools.ToolFilterConfig.block_unless_regex">block_unless_regex</a></code>
+                (<code><span title="dict">dict</span>[<span title="str">str</span>, <span title="str">str</span>]</code>)
             </li>
         </ul>
 
@@ -3103,12 +3661,13 @@ These commands are executed in a subprocess and are not part of the environment 
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">block_unless_regex</span><span class="p">:</span> <span class="n">dict</span><span class="p">[</span><span class="n">str</span><span class="p">,</span> <span class="n">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;radare2&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">b(?:radare2)</span><span class="se">\\</span><span class="s1">b.*</span><span class="se">\\</span><span class="s1">s+-c</span><span class="se">\\</span><span class="s1">s+.*&#39;</span><span class="p">,</span> <span class="s1">&#39;r2&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">b(?:radare2)</span><span class="se">\\</span><span class="s1">b.*</span><span class="se">\\</span><span class="s1">s+-c</span><span class="se">\\</span><span class="s1">s+.*&#39;</span><span class="p">}</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">block_unless_regex</span><span class="p">:</span> <span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;radare2&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">b(?:radare2)</span><span class="se">\\</span><span class="s1">b.*</span><span class="se">\\</span><span class="s1">s+-c</span><span class="se">\\</span><span class="s1">s+.*&#39;</span><span class="p">,</span> <span class="s1">&#39;r2&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">b(?:radare2)</span><span class="se">\\</span><span class="s1">b.*</span><span class="se">\\</span><span class="s1">s+-c</span><span class="se">\\</span><span class="s1">s+.*&#39;</span><span class="p">}</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
-        <p>Block any command that matches one of these regexes unless it also matches the regex</p>
+        <p>Block any command that matches one of these names unless it also matches the regex</p>
+
     </div>
 
 </div>
@@ -3126,12 +3685,13 @@ These commands are executed in a subprocess and are not part of the environment 
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">blocklist</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;vim&#39;</span><span class="p">,</span> <span class="s1">&#39;vi&#39;</span><span class="p">,</span> <span class="s1">&#39;emacs&#39;</span><span class="p">,</span> <span class="s1">&#39;nano&#39;</span><span class="p">,</span> <span class="s1">&#39;nohup&#39;</span><span class="p">,</span> <span class="s1">&#39;git&#39;</span><span class="p">,</span> <span class="s1">&#39;gdb&#39;</span><span class="p">,</span> <span class="s1">&#39;less&#39;</span><span class="p">,</span> <span class="s1">&#39;tail -f&#39;</span><span class="p">,</span> <span class="s1">&#39;python -m venv&#39;</span><span class="p">]</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">blocklist</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;vim&#39;</span><span class="p">,</span> <span class="s1">&#39;vi&#39;</span><span class="p">,</span> <span class="s1">&#39;emacs&#39;</span><span class="p">,</span> <span class="s1">&#39;nano&#39;</span><span class="p">,</span> <span class="s1">&#39;nohup&#39;</span><span class="p">,</span> <span class="s1">&#39;gdb&#39;</span><span class="p">,</span> <span class="s1">&#39;less&#39;</span><span class="p">,</span> <span class="s1">&#39;tail -f&#39;</span><span class="p">,</span> <span class="s1">&#39;python -m venv&#39;</span><span class="p">,</span> <span class="s1">&#39;make&#39;</span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Block any command that starts with one of these</p>
+
     </div>
 
 </div>
@@ -3149,10 +3709,11 @@ These commands are executed in a subprocess and are not part of the environment 
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">blocklist_error_template</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="s2">&quot;Operation &#39;{{action}}&#39; is not supported by this environment.&quot;</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">blocklist_error_template</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="s2">&quot;Operation &#39;{{action}}&#39; is not supported by this environment.&quot;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
     </div>
 
 </div>
@@ -3170,12 +3731,13 @@ These commands are executed in a subprocess and are not part of the environment 
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">blocklist_standalone</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;python3&#39;</span><span class="p">,</span> <span class="s1">&#39;ipython&#39;</span><span class="p">,</span> <span class="s1">&#39;bash&#39;</span><span class="p">,</span> <span class="s1">&#39;sh&#39;</span><span class="p">,</span> <span class="s1">&#39;/bin/bash&#39;</span><span class="p">,</span> <span class="s1">&#39;/bin/sh&#39;</span><span class="p">,</span> <span class="s1">&#39;nohup&#39;</span><span class="p">,</span> <span class="s1">&#39;vi&#39;</span><span class="p">,</span> <span class="s1">&#39;vim&#39;</span><span class="p">,</span> <span class="s1">&#39;emacs&#39;</span><span class="p">,</span> <span class="s1">&#39;nano&#39;</span><span class="p">,</span> <span class="s1">&#39;su&#39;</span><span class="p">]</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">blocklist_standalone</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;python3&#39;</span><span class="p">,</span> <span class="s1">&#39;ipython&#39;</span><span class="p">,</span> <span class="s1">&#39;bash&#39;</span><span class="p">,</span> <span class="s1">&#39;sh&#39;</span><span class="p">,</span> <span class="s1">&#39;/bin/bash&#39;</span><span class="p">,</span> <span class="s1">&#39;/bin/sh&#39;</span><span class="p">,</span> <span class="s1">&#39;nohup&#39;</span><span class="p">,</span> <span class="s1">&#39;vi&#39;</span><span class="p">,</span> <span class="s1">&#39;vim&#39;</span><span class="p">,</span> <span class="s1">&#39;emacs&#39;</span><span class="p">,</span> <span class="s1">&#39;nano&#39;</span><span class="p">,</span> <span class="s1">&#39;su&#39;</span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Block any command that matches one of these exactly</p>
+
     </div>
 
 </div>
@@ -3214,35 +3776,43 @@ These commands are executed in a subprocess and are not part of the environment 
         <p>Fields:</p>
         <ul>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.bundle.Bundle.path" href="#sweagent.tools.bundle.Bundle.path">path</a></code>
+              <code><a class="autorefs autorefs-internal" title="            path
+
+
+  
+      pydantic-field
+   (sweagent.tools.bundle.Bundle.path)" href="#sweagent.tools.bundle.Bundle.path">path</a></code>
                 (<code><span title="pathlib.Path">Path</span></code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.bundle.Bundle.hidden_tools" href="#sweagent.tools.bundle.Bundle.hidden_tools">hidden_tools</a></code>
-                (<code>list[str]</code>)
+              <code><a class="autorefs autorefs-internal" title="            hidden_tools
+
+
+  
+      pydantic-field
+   (sweagent.tools.bundle.Bundle.hidden_tools)" href="#sweagent.tools.bundle.Bundle.hidden_tools">hidden_tools</a></code>
+                (<code><span title="list">list</span>[<span title="str">str</span>]</code>)
             </li>
             <li>
               <code><span title="sweagent.tools.bundle.Bundle._config">_config</span></code>
-                (<code><span title="sweagent.tools.bundle.BundleConfig">BundleConfig</span></code>)
-            </li>
-            <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.bundle.Bundle.state_command" href="#sweagent.tools.bundle.Bundle.state_command">state_command</a></code>
-                (<code>str | None</code>)
-            </li>
-            <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.bundle.Bundle.config" href="#sweagent.tools.bundle.Bundle.config">config</a></code>
-                (<code><span title="sweagent.tools.bundle.BundleConfig">BundleConfig</span></code>)
-            </li>
-            <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.bundle.Bundle.commands" href="#sweagent.tools.bundle.Bundle.commands">commands</a></code>
-                (<code>list[<a class="autorefs autorefs-internal" title="sweagent.tools.commands.Command" href="../bundle_config/#sweagent.tools.commands.Command">Command</a>]</code>)
+                (<code><a class="autorefs autorefs-internal" title="            sweagent.tools.bundle.BundleConfig
+
+
+  
+      pydantic-model
+  " href="../bundle_config/#sweagent.tools.bundle.BundleConfig">BundleConfig</a></code>)
             </li>
         </ul>
 
         <p>Validators:</p>
         <ul>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.tools.bundle.Bundle.validate_tools" href="#sweagent.tools.bundle.Bundle.validate_tools">validate_tools</a></code>
+              <code><a class="autorefs autorefs-internal" title="            validate_tools
+
+
+  
+      pydantic-validator
+   (sweagent.tools.bundle.Bundle.validate_tools)" href="#sweagent.tools.bundle.Bundle.validate_tools">validate_tools</a></code>
             </li>
         </ul>
 
@@ -3265,14 +3835,20 @@ These commands are executed in a subprocess and are not part of the environment 
 
 
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">commands</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="sweagent.tools.commands.Command" href="../bundle_config/#sweagent.tools.commands.Command">Command</a></span><span class="p">]</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">commands</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="            sweagent.tools.commands.Command
+
+
+  
+      pydantic-model
+  " href="../bundle_config/#sweagent.tools.commands.Command">Command</a></span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
     </div>
 
 </div>
@@ -3286,14 +3862,20 @@ These commands are executed in a subprocess and are not part of the environment 
 
 
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">config</span><span class="p">:</span> <span class="n"><span title="sweagent.tools.bundle.BundleConfig">BundleConfig</span></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">config</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="            sweagent.tools.bundle.BundleConfig
+
+
+  
+      pydantic-model
+  " href="../bundle_config/#sweagent.tools.bundle.BundleConfig">BundleConfig</a></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
     </div>
 
 </div>
@@ -3311,10 +3893,11 @@ These commands are executed in a subprocess and are not part of the environment 
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">hidden_tools</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span><span class="p">]</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">hidden_tools</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
     </div>
 
 </div>
@@ -3336,6 +3919,7 @@ These commands are executed in a subprocess and are not part of the environment 
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
     </div>
 
 </div>
@@ -3349,14 +3933,15 @@ These commands are executed in a subprocess and are not part of the environment 
 
 
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">state_command</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">state_command</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">|</span> <span class="kc">None</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
     </div>
 
 </div>
@@ -3380,6 +3965,7 @@ These commands are executed in a subprocess and are not part of the environment 
 
     <div class="doc doc-contents ">
 
+
             <details class="quote">
               <summary>Source code in <code>sweagent/tools/bundle.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">22</span>
@@ -3402,7 +3988,7 @@ These commands are executed in a subprocess and are not part of the environment 
 <span class="normal">39</span>
 <span class="normal">40</span>
 <span class="normal">41</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@model_validator</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;after&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">validate_tools</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">validate_tools</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">_convert_path_to_abspath</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Bundle path &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="si">}</span><span class="s2">&#39; does not exist.&quot;</span>
@@ -3442,6 +4028,8 @@ These commands are executed in a subprocess and are not part of the environment 
 
 
 
+
+  
 
 
 
@@ -3526,10 +4114,14 @@ These commands are executed in a subprocess and are not part of the environment 
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.top", "content.action.edit", "navigation.footer", "content.code.copy", "content.footnote.tooltips", "header.autohide", "announce.dismiss", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.top", "content.action.edit", "navigation.footer", "content.code.copy", "content.footnote.tooltips", "header.autohide", "announce.dismiss", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../assets/js/sh-annotation.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});

@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -37,7 +37,7 @@
   
   
   
-  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-12 6 6-6-6-6-1.4 1.4 4.6 4.6-4.6 4.6z"/></svg>');}</style>
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010m-12%206%206-6-6-6-1.4%201.4%204.6%204.6-4.6%204.6z%22/%3E%3C/svg%3E');}</style>
 
 
     
@@ -65,6 +65,16 @@
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-SG2NC1GDRD"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-SG2NC1GDRD",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-SG2NC1GDRD",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
     
     
@@ -113,7 +123,7 @@
               </button>
             
             
-This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/installation/migration/">New features + migration guide.</a>
+SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-agent.com/latest/installation/migration/">New features + migration guide.</a>
 
           </div>
           
@@ -201,11 +211,13 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -237,13 +249,14 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
         <a href="https://github.com/SWE-agent/SWE-agent" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     SWE-agent/SWE-agent
@@ -262,6 +275,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         
   
   
+  
     
   
   
@@ -270,6 +284,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../.." class="md-tabs__link">
           
+  
   
     
   
@@ -285,11 +300,13 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../usage/" class="md-tabs__link">
           
+  
   
     
   
@@ -305,11 +322,13 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../reference/" class="md-tabs__link">
           
+  
   
     
   
@@ -361,7 +380,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="https://github.com/SWE-agent/SWE-agent" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     SWE-agent/SWE-agent
@@ -394,6 +413,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
         
         
@@ -408,13 +428,14 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../.." class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     Getting Started
+    
   </span>
   
 
@@ -465,6 +486,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
       
     
@@ -476,13 +498,14 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     Installation
+    
   </span>
   
 
@@ -514,8 +537,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../source/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     From source
+    
   </span>
   
 
@@ -535,8 +560,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../codespaces/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     In browser
+    
   </span>
   
 
@@ -556,8 +583,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../keys/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Models and keys
+    
   </span>
   
 
@@ -577,8 +606,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../migration/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     1.0 migration
+    
   </span>
   
 
@@ -598,8 +629,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../tips/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Troubleshooting
+    
   </span>
   
 
@@ -628,8 +661,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
     Changelog
+    
   </span>
   
 
@@ -639,8 +674,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
     Changelog
+    
   </span>
   
 
@@ -662,14 +699,23 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#070-2024-09-23" class="md-nav__link">
+  <a href="#swe-agent-101-2025-02-28" class="md-nav__link">
     <span class="md-ellipsis">
-      0.7.0 (2024-09-23)
+      SWE-agent 1.0.1 (2025-02-28)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="0.7.0 (2024-09-23)">
+    <nav class="md-nav" aria-label="SWE-agent 1.0.1 (2025-02-28)">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#added" class="md-nav__link">
@@ -689,8 +735,92 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#new-contributors" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Contributors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#100-2025-02-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0 (2025-02-13)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.0.0 (2025-02-13)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-contributors_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      New contributors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#070-2024-09-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.7.0 (2024-09-23)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.7.0 (2024-09-23)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-contributors_2" class="md-nav__link">
     <span class="md-ellipsis">
       New Contributors
     </span>
@@ -798,7 +928,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
 </li>
         
           <li class="md-nav__item">
-  <a href="#added_1" class="md-nav__link">
+  <a href="#added_3" class="md-nav__link">
     <span class="md-ellipsis">
       Added
     </span>
@@ -840,7 +970,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added_2" class="md-nav__link">
+  <a href="#added_4" class="md-nav__link">
     <span class="md-ellipsis">
       Added
     </span>
@@ -864,7 +994,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added_3" class="md-nav__link">
+  <a href="#added_5" class="md-nav__link">
     <span class="md-ellipsis">
       Added
     </span>
@@ -897,7 +1027,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added_4" class="md-nav__link">
+  <a href="#added_6" class="md-nav__link">
     <span class="md-ellipsis">
       Added
     </span>
@@ -966,6 +1096,9 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
         
       
+        
+      
+    
     
     
       
@@ -982,8 +1115,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
           <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Tutorials
+    
   </span>
   
 
@@ -1007,8 +1142,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../usage/hello_world/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Hello world
+    
   </span>
   
 
@@ -1028,8 +1165,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../usage/cl_tutorial/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Command line basics
+    
   </span>
   
 
@@ -1049,8 +1188,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../usage/coding_challenges/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Solving coding challenges
+    
   </span>
   
 
@@ -1070,8 +1211,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../usage/inspector/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Trajectory inspector
+    
   </span>
   
 
@@ -1091,8 +1234,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../usage/batch_mode/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Batch mode
+    
   </span>
   
 
@@ -1109,11 +1254,36 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   
   
     <li class="md-nav__item">
-      <a href="../../usage/benchmarking/" class="md-nav__link">
+      <a href="../../usage/competitive_runs/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Benchmarking
+    Competitive runs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/whats_next/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What's next?
+    
   </span>
   
 
@@ -1141,8 +1311,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../faq/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FAQ
+    
   </span>
   
 
@@ -1180,6 +1352,9 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
         
       
+        
+      
+    
     
     
       
@@ -1193,13 +1368,14 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../../usage/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     User Guides
+    
   </span>
   
 
@@ -1240,6 +1416,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
       
     
@@ -1251,13 +1428,14 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../../background/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     Project overview
+    
   </span>
   
 
@@ -1289,8 +1467,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../background/architecture/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Architecture
+    
   </span>
   
 
@@ -1310,8 +1490,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../background/aci/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Agent tools
+    
   </span>
   
 
@@ -1336,11 +1518,36 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   
   
     <li class="md-nav__item">
+      <a href="../../usage/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Command line interface
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../usage/trajectories/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Output files
+    
   </span>
   
 
@@ -1369,6 +1576,13 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
         
       
+        
+      
+        
+      
+        
+      
+    
     
     
       
@@ -1379,30 +1593,31 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
         
-          
           
           <div class="md-nav__link md-nav__container">
             <a href="../../config/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     Configuration
+    
   </span>
   
 
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             Configuration
           </label>
@@ -1420,8 +1635,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../config/config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Config files
+    
   </span>
   
 
@@ -1441,8 +1658,33 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../config/templates/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Templates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Models
+    
   </span>
   
 
@@ -1462,8 +1704,56 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../config/demonstrations/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Demonstrations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/environments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Environments
+    
   </span>
   
 
@@ -1496,6 +1786,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
       
     
@@ -1504,22 +1795,24 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
         
           
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Development
+    
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             Development
           </label>
@@ -1535,8 +1828,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../dev/contribute/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Contribution guide
+    
   </span>
   
 
@@ -1556,8 +1851,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../dev/formatting_conflicts/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Formatting conflicts
+    
   </span>
   
 
@@ -1609,6 +1906,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
       
     
@@ -1620,13 +1918,14 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../../reference/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     API Reference
+    
   </span>
   
 
@@ -1663,6 +1962,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
       
     
@@ -1677,8 +1977,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Run config
+    
   </span>
   
 
@@ -1702,8 +2004,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../reference/run_single_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Run single
+    
   </span>
   
 
@@ -1723,8 +2027,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../reference/run_batch_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Run batch
+    
   </span>
   
 
@@ -1759,6 +2065,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
       
     
@@ -1773,8 +2080,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Instance config
+    
   </span>
   
 
@@ -1798,8 +2107,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../reference/problem_statements/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Problem statements
+    
   </span>
   
 
@@ -1819,8 +2130,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../reference/repo/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Repository
+    
   </span>
   
 
@@ -1840,8 +2153,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../reference/batch_instances/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Batch instances
+    
   </span>
   
 
@@ -1878,6 +2193,9 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
         
       
+        
+      
+    
     
     
       
@@ -1894,8 +2212,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
           <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Agent config
+    
   </span>
   
 
@@ -1919,8 +2239,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../reference/agent_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Agent config
+    
   </span>
   
 
@@ -1940,8 +2262,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../reference/model_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Model config
+    
   </span>
   
 
@@ -1961,8 +2285,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../reference/template_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Templates
+    
   </span>
   
 
@@ -1982,8 +2308,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../reference/tools_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Tools
+    
   </span>
   
 
@@ -2003,8 +2331,33 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../reference/history_processor_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     History processors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/parsers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Action parsers
+    
   </span>
   
 
@@ -2032,8 +2385,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../reference/env_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Environment config
+    
   </span>
   
 
@@ -2053,8 +2408,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../reference/bundle_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Tool bundle config
+    
   </span>
   
 
@@ -2081,6 +2438,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
       
     
@@ -2095,8 +2453,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
           <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Classes
+    
   </span>
   
 
@@ -2120,8 +2480,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../reference/agent/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Agent class
+    
   </span>
   
 
@@ -2141,8 +2503,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../reference/env/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Environment class
+    
   </span>
   
 
@@ -2162,8 +2526,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../reference/exceptions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Exceptions
+    
   </span>
   
 
@@ -2215,14 +2581,23 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#070-2024-09-23" class="md-nav__link">
+  <a href="#swe-agent-101-2025-02-28" class="md-nav__link">
     <span class="md-ellipsis">
-      0.7.0 (2024-09-23)
+      SWE-agent 1.0.1 (2025-02-28)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="0.7.0 (2024-09-23)">
+    <nav class="md-nav" aria-label="SWE-agent 1.0.1 (2025-02-28)">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#added" class="md-nav__link">
@@ -2242,8 +2617,92 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#new-contributors" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Contributors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#100-2025-02-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0 (2025-02-13)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.0.0 (2025-02-13)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-contributors_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      New contributors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#070-2024-09-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.7.0 (2024-09-23)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.7.0 (2024-09-23)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-contributors_2" class="md-nav__link">
     <span class="md-ellipsis">
       New Contributors
     </span>
@@ -2351,7 +2810,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
 </li>
         
           <li class="md-nav__item">
-  <a href="#added_1" class="md-nav__link">
+  <a href="#added_3" class="md-nav__link">
     <span class="md-ellipsis">
       Added
     </span>
@@ -2393,7 +2852,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added_2" class="md-nav__link">
+  <a href="#added_4" class="md-nav__link">
     <span class="md-ellipsis">
       Added
     </span>
@@ -2417,7 +2876,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added_3" class="md-nav__link">
+  <a href="#added_5" class="md-nav__link">
     <span class="md-ellipsis">
       Added
     </span>
@@ -2450,7 +2909,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added_4" class="md-nav__link">
+  <a href="#added_6" class="md-nav__link">
     <span class="md-ellipsis">
       Added
     </span>
@@ -2495,6 +2954,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
                 
                   
 
+
   
     <a href="https://github.com/SWE-agent/SWE-agent/edit/main/docs/installation/changelog.md" title="Edit this page" class="md-content__button md-icon">
       
@@ -2505,55 +2965,123 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
 
 
 <h1 id="changelog">Changelog</h1>
-<h2 id="070-2024-09-23">0.7.0 (2024-09-23)</h2>
-<h3 id="added">Added</h3>
-<p>The main new feature is the <strong>EnIGMA mode</strong>, which included additions like support for Interactive Agent Tools
-and Summarizers.</p>
+<h2 id="swe-agent-101-2025-02-28">SWE-agent 1.0.1 (2025-02-28)</h2>
+<p>This fixup release brings fixes mostly to the compatibility with local models. We have also significantly expanded the documentation in that aspect (<a href="https://swe-agent.com/latest/installation/keys/">models &amp; keys documentation</a>).</p>
+<h3 id="changed">Changed</h3>
 <ul>
-<li>Add filemap command in the spirit of repomap by <a href="https://github.com/samuela">@samuela</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/619">#619</a></li>
-<li>Create config to run human eval style challenges by <a href="https://github.com/ofirpress">@ofirpress</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/658">#658</a></li>
-<li>Add claude 3.5 sonnet to models by <a href="https://github.com/carlosejimenez">@carlosejimenez</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/601">#601</a></li>
-<li>Enh: Warn if scrolling &gt;= 3 times by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/626">#626</a></li>
-<li>feat: support deepseek-coder LLM by <a href="https://github.com/jcraftsman">@jcraftsman</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/638">#638</a></li>
-<li>Enh: Make timeout for agent commands configurable by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/674">#674</a></li>
-<li>Add support for new gpt-4o-mini model by <a href="https://github.com/ivan4722">@ivan4722</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/693">#693</a></li>
-<li>Groq Models Integration by <a href="https://github.com/MohammedNagdy">@MohammedNagdy</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/721">#721</a></li>
-<li>Make log level configurable; add TRACE level by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/612">#612</a></li>
+<li>Change: Make anthropic_filemap the new default config by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/SWE-agent/pull/927">#927</a></li>
+</ul>
+<h3 id="added">Added</h3>
+<ul>
+<li>Enh: Set timeout for post_startup_commands by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/SWE-agent/pull/973">#973</a></li>
+<li>Enh: Allow to override max_input_tokens for local models by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/SWE-agent/pull/992">#992</a></li>
 </ul>
 <h3 id="fixes">Fixes</h3>
 <ul>
-<li>Compatibility with SWE-bench 2.0 by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/671">#671</a></li>
-<li>ensure variables work in special command docstring by <a href="https://github.com/forresty">@forresty</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/628">#628</a></li>
-<li>Important fix: Catch CostLimitExceeded in retry because of format/block by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/682">#682</a></li>
-<li>Fix: Handle empty traj in should_skip by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/616">#616</a></li>
-<li>Fix for end-marker communicate: Exit status always 0/invalid by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/644">#644</a></li>
-<li>Fix: Insufficient quoting of git commit message by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/646">#646</a></li>
-<li>Fix nonsensical trajectory formatting for PRs by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/647">#647</a></li>
-<li>Fix: sweunexpected keyword 'python_version' by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/692">#692</a></li>
-<li>Fix: Use LONG_TIMEOUT for pre_install commands by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/695">#695</a></li>
-<li>Fix: UnboundLocalError when catching decoding issue by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/709">#709</a></li>
-<li>Also create empty patch files for completeness by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/725">#725</a></li>
-<li>Fix: Raise ContextWindowExceeded instead of exit_cost by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/727">#727</a></li>
-<li>Fix: Deal with non-utf8 encoded bytes in comm by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/731">#731</a></li>
-<li>Fix: Handle spaces in repo names by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/734">#734</a></li>
-<li>Fix: Ensure utils is part of package by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/742">#742</a></li>
-<li>Fix: Submitting ' ' in human mode crashes container by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/749">#749</a></li>
-<li>Fix: Block su as command by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/752">#752</a></li>
-<li>Fix: SWE_AGENT_MODEL_MAX_RETRIES needs casting by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/757">#757</a></li>
+<li>Fix: Handling local models cost lookup issues by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/SWE-agent/pull/937">#937</a></li>
+<li>Fix: Requires-python &gt;= 3.11 by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/SWE-agent/pull/940">#940</a></li>
+<li>traj inspector viewport reset by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/SWE-agent/pull/946">#946</a></li>
+<li>Fix: Reset viewport when next/prev step/traj by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/SWE-agent/pull/948">#948</a></li>
+<li>Fix: Disable highlighting of model outputs by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/SWE-agent/pull/949">#949</a></li>
+<li>Fix: Create PRs by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/SWE-agent/pull/954">#954</a></li>
+<li>Fix: Add <strong>init</strong>,py to agent/hooks by <a href="https://github.com/RNabel">@RNabel</a> in <a href="https://github.com/princeton-nlp/SWE-agent/pull/961">#961</a></li>
+<li>Fix: Pin textual to version 1.0.0 by <a href="https://github.com/RNabel">@RNabel</a> in <a href="https://github.com/princeton-nlp/SWE-agent/pull/960">#960</a></li>
+<li>Fix: OpenAI API: Don't pass None tool_calls to the OpenAI API by <a href="https://github.com/RNabel">@RNabel</a> in <a href="https://github.com/princeton-nlp/SWE-agent/pull/967">#967</a></li>
+<li>Fix: Forces platform to be linux/amd64 for swe-bench batch runs by <a href="https://github.com/carlosejimenez">@carlosejimenez</a> in <a href="https://github.com/princeton-nlp/SWE-agent/pull/942">#942</a></li>
+<li>Fix "TypeError: Cannot read properties of null (reading 'replace')" in Trajectory viewer by <a href="https://github.com/0xba1a">@0xba1a</a> in <a href="https://github.com/princeton-nlp/SWE-agent/pull/989">#989</a></li>
+<li>Fix: No retries if costs cannot be calculated by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/SWE-agent/pull/990">#990</a></li>
+<li>Fix: Race condition/size change during iteration by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/SWE-agent/pull/993">#993</a></li>
+<li>Fix: Handle total cost limit exceeded by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/SWE-agent/pull/994">#994</a></li>
 </ul>
-<h3 id="new-contributors">New Contributors</h3>
-<p>🎉 <strong>@talorabr, @udiboy1209, @haoranxi, @NickNameInvalid, @rollingcoconut joined the team to build EnIGMA</strong> 🎉</p>
+<h2 id="new-contributors">New Contributors</h2>
 <ul>
-<li>@carlosejimenez made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/601">#601</a></li>
-<li>@samefarrar made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/606">#606</a></li>
-<li>@hubstrauss made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/625">#625</a></li>
-<li>@samuela made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/619">#619</a></li>
-<li>@forresty made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/628">#628</a></li>
-<li>@jcraftsman made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/638">#638</a></li>
-<li>@ivan4722 made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/693">#693</a></li>
-<li>@JoshuaPurtell made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/703">#703</a></li>
-<li>@MohammedNagdy made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/721">#721</a></li>
-<li>@pdemro made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/729">#729</a></li>
+<li><a href="https://github.com/RNabel">@RNabel</a> made their first contribution in <a href="https://github.com/princeton-nlp/SWE-agent/pull/961">#961</a></li>
+<li><a href="https://github.com/dhruvji">@dhruvji</a> made their first contribution in <a href="https://github.com/princeton-nlp/SWE-agent/pull/963">#963</a></li>
+<li><a href="https://github.com/0xba1a">@0xba1a</a> made their first contribution in <a href="https://github.com/princeton-nlp/SWE-agent/pull/989">#989</a></li>
+</ul>
+<p><strong>Full Changelog</strong>: <a href="https://github.com/SWE-agent/SWE-agent/compare/v1.0.0...v1.0.1">https://github.com/SWE-agent/SWE-agent/compare/v1.0.0...v1.0.1</a></p>
+<h2 id="100-2025-02-13">1.0.0 (2025-02-13)</h2>
+<p>This is a massive release that includes many new features, fixes, and changes.
+You can read more about the changes in the <a href="../migration/">migration guide</a>.</p>
+<h3 id="added_1">Added</h3>
+<ul>
+<li>Fast, massively parallel code execution with <a href="https://github.com/swe-agent/SWE-ReX">SWE-ReX</a>.</li>
+<li>Run SWE-agent locally but execute code in the cloud (using modal, AWS, or anything else that runs <a href="https://github.com/swe-agent/SWE-ReX">SWE-ReX</a>).</li>
+<li>Configurable retry mechanisms: Try multiple agent configurations, models, parameters, etc., then choose the best one.</li>
+<li>Flexible tool definitions with <a href="../../config/tools/">tool bundles</a>.</li>
+<li>All language models supported using <code>litellm</code> (see <a href="../keys/">models</a>).</li>
+<li>Override any configuration option from the command line (see <a href="../../usage/cl_tutorial/">command line basics</a>).</li>
+<li>New <a href="../../usage/inspector/">command line trajectory inspector</a> to scroll few hundreds of trajectories with ease.</li>
+<li><a href="../../usage/cli/">New command line interface</a> with subcommands for running over single issues, batches, and various utility commands.</li>
+<li>Greatly simplified and cleaned up codebase. In particular, the <code>Agent</code> class is now much easier to modify.</li>
+</ul>
+<h3 id="changed_1">Changed</h3>
+<ul>
+<li>The code base has been largely rewritten. Lots of things have moved and changed.</li>
+<li>The biggest change is that we now use <a href="https://github.com/swe-agent/SWE-ReX">SWE-ReX</a> for code execution. This allowed us to remove a lot of distracting code from the agent.</li>
+<li>We now use <a href="https://docs.pydantic.dev/"><code>pydantic</code></a> for all configuration.</li>
+<li>Templates are now <a href="https://jinja.palletsprojects.com/"><code>jinja2</code></a> templates, which gives you more flexibility (but you'll have to update your templates)</li>
+<li>All models are now configured using <code>litellm</code> (see <a href="../keys/">models</a>).</li>
+</ul>
+<p>See the <a href="../migration/">migration guide</a> for more details.</p>
+<h3 id="new-contributors_1">New contributors</h3>
+<ul>
+<li><a href="https://github.com/manya706">@manya706</a> made their first contribution in <a href="[#787](https://github.com/princeton-nlp/SWE-agent/pull/787)">#787</a></li>
+<li><a href="https://github.com/Prathamesh010">@Prathamesh010</a> made their first contribution in <a href="[#796](https://github.com/princeton-nlp/SWE-agent/pull/796)">#796</a></li>
+<li><a href="https://github.com/magnimusprime">@magnimusprime</a> made their first contribution in <a href="[#813](https://github.com/princeton-nlp/SWE-agent/pull/813)">#813</a></li>
+<li><a href="https://github.com/dependabot">@dependabot</a> made their first contribution in <a href="[#817](https://github.com/princeton-nlp/SWE-agent/pull/817)">#817</a></li>
+<li><a href="https://github.com/Mefisto04">@Mefisto04</a> made their first contribution in <a href="[#824](https://github.com/princeton-nlp/SWE-agent/pull/824)">#824</a></li>
+<li><a href="https://github.com/acheshkov">@acheshkov</a> made their first contribution in <a href="[#857](https://github.com/princeton-nlp/SWE-agent/pull/857)">#857</a></li>
+<li><a href="https://github.com/yu-iskw">@yu-iskw</a> made their first contribution in <a href="[#881](https://github.com/princeton-nlp/SWE-agent/pull/881)">#881</a></li>
+</ul>
+<h2 id="070-2024-09-23">0.7.0 (2024-09-23)</h2>
+<h3 id="added_2">Added</h3>
+<p>The main new feature is the <strong>EnIGMA mode</strong>, which included additions like support for Interactive Agent Tools
+and Summarizers.</p>
+<ul>
+<li>Add filemap command in the spirit of repomap by <a href="https://github.com/samuela">@samuela</a> in <a href="[#619](https://github.com/princeton-nlp/SWE-agent/pull/619)">#619</a></li>
+<li>Create config to run human eval style challenges by <a href="https://github.com/ofirpress">@ofirpress</a> in <a href="[#658](https://github.com/princeton-nlp/SWE-agent/pull/658)">#658</a></li>
+<li>Add claude 3.5 sonnet to models by <a href="https://github.com/carlosejimenez">@carlosejimenez</a> in <a href="[#601](https://github.com/princeton-nlp/SWE-agent/pull/601)">#601</a></li>
+<li>Enh: Warn if scrolling &gt;= 3 times by <a href="https://github.com/klieret">@klieret</a> in <a href="[#626](https://github.com/princeton-nlp/SWE-agent/pull/626)">#626</a></li>
+<li>feat: support deepseek-coder LLM by <a href="https://github.com/jcraftsman">@jcraftsman</a> in <a href="[#638](https://github.com/princeton-nlp/SWE-agent/pull/638)">#638</a></li>
+<li>Enh: Make timeout for agent commands configurable by <a href="https://github.com/klieret">@klieret</a> in <a href="[#674](https://github.com/princeton-nlp/SWE-agent/pull/674)">#674</a></li>
+<li>Add support for new gpt-4o-mini model by <a href="https://github.com/ivan4722">@ivan4722</a> in <a href="[#693](https://github.com/princeton-nlp/SWE-agent/pull/693)">#693</a></li>
+<li>Groq Models Integration by <a href="https://github.com/MohammedNagdy">@MohammedNagdy</a> in <a href="[#721](https://github.com/princeton-nlp/SWE-agent/pull/721)">#721</a></li>
+<li>Make log level configurable; add TRACE level by <a href="https://github.com/klieret">@klieret</a> in <a href="[#612](https://github.com/princeton-nlp/SWE-agent/pull/612)">#612</a></li>
+</ul>
+<h3 id="fixes_1">Fixes</h3>
+<ul>
+<li>Compatibility with SWE-bench 2.0 by <a href="https://github.com/klieret">@klieret</a> in <a href="[#671](https://github.com/princeton-nlp/SWE-agent/pull/671)">#671</a></li>
+<li>ensure variables work in special command docstring by <a href="https://github.com/forresty">@forresty</a> in <a href="[#628](https://github.com/princeton-nlp/SWE-agent/pull/628)">#628</a></li>
+<li>Important fix: Catch CostLimitExceeded in retry because of format/block by <a href="https://github.com/klieret">@klieret</a> in <a href="[#682](https://github.com/princeton-nlp/SWE-agent/pull/682)">#682</a></li>
+<li>Fix: Handle empty traj in should_skip by <a href="https://github.com/klieret">@klieret</a> in <a href="[#616](https://github.com/princeton-nlp/SWE-agent/pull/616)">#616</a></li>
+<li>Fix for end-marker communicate: Exit status always 0/invalid by <a href="https://github.com/klieret">@klieret</a> in <a href="[#644](https://github.com/princeton-nlp/SWE-agent/pull/644)">#644</a></li>
+<li>Fix: Insufficient quoting of git commit message by <a href="https://github.com/klieret">@klieret</a> in <a href="[#646](https://github.com/princeton-nlp/SWE-agent/pull/646)">#646</a></li>
+<li>Fix nonsensical trajectory formatting for PRs by <a href="https://github.com/klieret">@klieret</a> in <a href="[#647](https://github.com/princeton-nlp/SWE-agent/pull/647)">#647</a></li>
+<li>Fix: sweunexpected keyword 'python_version' by <a href="https://github.com/klieret">@klieret</a> in <a href="[#692](https://github.com/princeton-nlp/SWE-agent/pull/692)">#692</a></li>
+<li>Fix: Use LONG_TIMEOUT for pre_install commands by <a href="https://github.com/klieret">@klieret</a> in <a href="[#695](https://github.com/princeton-nlp/SWE-agent/pull/695)">#695</a></li>
+<li>Fix: UnboundLocalError when catching decoding issue by <a href="https://github.com/klieret">@klieret</a> in <a href="[#709](https://github.com/princeton-nlp/SWE-agent/pull/709)">#709</a></li>
+<li>Also create empty patch files for completeness by <a href="https://github.com/klieret">@klieret</a> in <a href="[#725](https://github.com/princeton-nlp/SWE-agent/pull/725)">#725</a></li>
+<li>Fix: Raise ContextWindowExceeded instead of exit_cost by <a href="https://github.com/klieret">@klieret</a> in <a href="[#727](https://github.com/princeton-nlp/SWE-agent/pull/727)">#727</a></li>
+<li>Fix: Deal with non-utf8 encoded bytes in comm by <a href="https://github.com/klieret">@klieret</a> in <a href="[#731](https://github.com/princeton-nlp/SWE-agent/pull/731)">#731</a></li>
+<li>Fix: Handle spaces in repo names by <a href="https://github.com/klieret">@klieret</a> in <a href="[#734](https://github.com/princeton-nlp/SWE-agent/pull/734)">#734</a></li>
+<li>Fix: Ensure utils is part of package by <a href="https://github.com/klieret">@klieret</a> in <a href="[#742](https://github.com/princeton-nlp/SWE-agent/pull/742)">#742</a></li>
+<li>Fix: Submitting ' ' in human mode crashes container by <a href="https://github.com/klieret">@klieret</a> in <a href="[#749](https://github.com/princeton-nlp/SWE-agent/pull/749)">#749</a></li>
+<li>Fix: Block su as command by <a href="https://github.com/klieret">@klieret</a> in <a href="[#752](https://github.com/princeton-nlp/SWE-agent/pull/752)">#752</a></li>
+<li>Fix: SWE_AGENT_MODEL_MAX_RETRIES needs casting by <a href="https://github.com/klieret">@klieret</a> in <a href="[#757](https://github.com/princeton-nlp/SWE-agent/pull/757)">#757</a></li>
+</ul>
+<h3 id="new-contributors_2">New Contributors</h3>
+<p>🎉 <strong><a href="https://github.com/talorabr">@talorabr</a>, <a href="https://github.com/udiboy1209">@udiboy1209</a>, <a href="https://github.com/haoranxi">@haoranxi</a>, <a href="https://github.com/NickNameInvalid">@NickNameInvalid</a>, <a href="https://github.com/rollingcoconut">@rollingcoconut</a> joined the team to build EnIGMA</strong> 🎉</p>
+<ul>
+<li><a href="https://github.com/samefarrar">@samefarrar</a> made their first contribution in <a href="[#606](https://github.com/princeton-nlp/SWE-agent/pull/606)">#606</a></li>
+<li><a href="https://github.com/hubstrauss">@hubstrauss</a> made their first contribution in <a href="[#625](https://github.com/princeton-nlp/SWE-agent/pull/625)">#625</a></li>
+<li><a href="https://github.com/samuela">@samuela</a> made their first contribution in <a href="[#619](https://github.com/princeton-nlp/SWE-agent/pull/619)">#619</a></li>
+<li><a href="https://github.com/forresty">@forresty</a> made their first contribution in <a href="[#628](https://github.com/princeton-nlp/SWE-agent/pull/628)">#628</a></li>
+<li><a href="https://github.com/jcraftsman">@jcraftsman</a> made their first contribution in <a href="[#638](https://github.com/princeton-nlp/SWE-agent/pull/638)">#638</a></li>
+<li><a href="https://github.com/ivan4722">@ivan4722</a> made their first contribution in <a href="[#693](https://github.com/princeton-nlp/SWE-agent/pull/693)">#693</a></li>
+<li><a href="https://github.com/JoshuaPurtell">@JoshuaPurtell</a> made their first contribution in <a href="[#703](https://github.com/princeton-nlp/SWE-agent/pull/703)">#703</a></li>
+<li><a href="https://github.com/MohammedNagdy">@MohammedNagdy</a> made their first contribution in <a href="[#721](https://github.com/princeton-nlp/SWE-agent/pull/721)">#721</a></li>
+<li><a href="https://github.com/pdemro">@pdemro</a> made their first contribution in <a href="[#729](https://github.com/princeton-nlp/SWE-agent/pull/729)">#729</a></li>
 </ul>
 <h2 id="061-2024-06-20">0.6.1 (2024-06-20)</h2>
 <p><a href="https://github.com/SWE-agent/SWE-agent/compare/v0.6.0...v0.6.1">All new commits</a></p>
@@ -2561,122 +3089,122 @@ and Summarizers.</p>
 We also solve a bug where existing linter errors in a file left SWE-agent unable to edit (because of our lint-retry-loop).</p>
 <h3 id="breaking-changes">Breaking changes</h3>
 <ul>
-<li>Change: sparse clone method is now correctly called "shallow" by <a href="https://github.com/klieret">@klieret</a> in <a href="[#591](https://github.com/SWE-agent/SWE-agent/pull/591)">#591</a></li>
+<li>Change: sparse clone method is now correctly called "shallow" by <a href="https://github.com/klieret">@klieret</a> in <a href="[#591]([#591](https://github.com/princeton-nlp/SWE-agent/pull/591))">#591</a></li>
 </ul>
 <h3 id="improved">Improved</h3>
 <ul>
-<li>Enh: Show commands when encountering timeout error by <a href="https://github.com/klieret">@klieret</a> in <a href="[#582](https://github.com/SWE-agent/SWE-agent/pull/582)">#582</a></li>
-<li>Enh: Configuration option to show time in log by <a href="https://github.com/klieret">@klieret</a> in <a href="[#583](https://github.com/SWE-agent/SWE-agent/pull/583)">#583</a></li>
-<li>Enh: Allow to configure LONG_TIMEOUT for SWEEnv by <a href="https://github.com/klieret">@klieret</a> in <a href="[#584](https://github.com/SWE-agent/SWE-agent/pull/584)">#584</a></li>
-<li>Enh: Always write log to traj directory by <a href="https://github.com/klieret">@klieret</a> in <a href="[#588](https://github.com/SWE-agent/SWE-agent/pull/588)">#588</a></li>
+<li>Enh: Show commands when encountering timeout error by <a href="https://github.com/klieret">@klieret</a> in <a href="[#582]([#582](https://github.com/princeton-nlp/SWE-agent/pull/582))">#582</a></li>
+<li>Enh: Configuration option to show time in log by <a href="https://github.com/klieret">@klieret</a> in <a href="[#583]([#583](https://github.com/princeton-nlp/SWE-agent/pull/583))">#583</a></li>
+<li>Enh: Allow to configure LONG_TIMEOUT for SWEEnv by <a href="https://github.com/klieret">@klieret</a> in <a href="[#584]([#584](https://github.com/princeton-nlp/SWE-agent/pull/584))">#584</a></li>
+<li>Enh: Always write log to traj directory by <a href="https://github.com/klieret">@klieret</a> in <a href="[#588]([#588](https://github.com/princeton-nlp/SWE-agent/pull/588))">#588</a></li>
 </ul>
 <h3 id="fixed">Fixed</h3>
 <ul>
-<li>fix <code>docker.errors.NotFound</code> by <a href="https://github.com/klieret">@klieret</a> in <a href="[#587](https://github.com/SWE-agent/SWE-agent/pull/587)">#587</a></li>
-<li>Fix: Revert to full clone method when needed by <a href="https://github.com/klieret">@klieret</a> in <a href="[#589](https://github.com/SWE-agent/SWE-agent/pull/589)">#589</a></li>
-<li>Fix: Refresh container_obj before querying status by <a href="https://github.com/klieret">@klieret</a> in <a href="[#590](https://github.com/SWE-agent/SWE-agent/pull/590)">#590</a></li>
-<li>Fixed #571 - show message that model arg is ignored in case of using Azure OpenAI by <a href="https://github.com/jank">@jank</a> in <a href="[#592](https://github.com/SWE-agent/SWE-agent/pull/592)">#592</a></li>
-<li>Fix: Linting blocks for existing lint errors by <a href="https://github.com/klieret">@klieret</a> in <a href="[#593](https://github.com/SWE-agent/SWE-agent/pull/593)">#593</a></li>
-<li>Fix: Process done marker not found in read with timeout by <a href="https://github.com/klieret">@klieret</a> in <a href="[#596](https://github.com/SWE-agent/SWE-agent/pull/596)">#596</a></li>
+<li>fix <code>docker.errors.NotFound</code> by <a href="https://github.com/klieret">@klieret</a> in <a href="[#587]([#587](https://github.com/princeton-nlp/SWE-agent/pull/587))">#587</a></li>
+<li>Fix: Revert to full clone method when needed by <a href="https://github.com/klieret">@klieret</a> in <a href="[#589]([#589](https://github.com/princeton-nlp/SWE-agent/pull/589))">#589</a></li>
+<li>Fix: Refresh container_obj before querying status by <a href="https://github.com/klieret">@klieret</a> in <a href="[#590]([#590](https://github.com/princeton-nlp/SWE-agent/pull/590))">#590</a></li>
+<li>Fixed #571 - show message that model arg is ignored in case of using Azure OpenAI by <a href="https://github.com/jank">@jank</a> in <a href="[#592]([#592](https://github.com/princeton-nlp/SWE-agent/pull/592))">#592</a></li>
+<li>Fix: Linting blocks for existing lint errors by <a href="https://github.com/klieret">@klieret</a> in <a href="[#593]([#593](https://github.com/princeton-nlp/SWE-agent/pull/593))">#593</a></li>
+<li>Fix: Process done marker not found in read with timeout by <a href="https://github.com/klieret">@klieret</a> in <a href="[#596]([#596](https://github.com/princeton-nlp/SWE-agent/pull/596))">#596</a></li>
 </ul>
 <h2 id="060-2024-06-05">0.6.0 (2024-06-05)</h2>
 <p><a href="https://github.com/SWE-agent/SWE-agent/compare/v0.5.0...v0.6.0">All new commits</a></p>
 <p><strong>We sped up SWE-agent by 2x</strong> (timed with GPT4o). This is mostly due to faster communication with the running processes inside of the Docker container and other container setup &amp; installation related improvements. Here are a few relevant PRs:</p>
 <ul>
-<li>Switch to fast communicate and shallow clone by default by <a href="https://github.com/klieret">@klieret</a> in <a href="[#530]([#530](https://github.com/SWE-agent/SWE-agent/pull/530))">#530</a></li>
-<li>Change: Only wait 1s for docker to start by <a href="https://github.com/klieret">@klieret</a> in <a href="[#541]([#541](https://github.com/SWE-agent/SWE-agent/pull/541))">#541</a></li>
-<li>Feat: experimental shallow cloning by <a href="https://github.com/klieret">@klieret</a> in <a href="[#498]([#498](https://github.com/SWE-agent/SWE-agent/pull/498))">#498</a></li>
-<li>Enh: Start from clone of python conda environment for speedup by <a href="https://github.com/klieret">@klieret</a> in <a href="[#548]([#548](https://github.com/SWE-agent/SWE-agent/pull/548))">#548</a></li>
-<li>Enh: Use uv for editable install by default by <a href="https://github.com/klieret">@klieret</a> in <a href="[#547]([#547](https://github.com/SWE-agent/SWE-agent/pull/547))">#547</a></li>
+<li>Switch to fast communicate and shallow clone by default by <a href="https://github.com/klieret">@klieret</a> in <a href="[#530]([#530]([#530](https://github.com/princeton-nlp/SWE-agent/pull/530)))">#530</a></li>
+<li>Change: Only wait 1s for docker to start by <a href="https://github.com/klieret">@klieret</a> in <a href="[#541]([#541]([#541](https://github.com/princeton-nlp/SWE-agent/pull/541)))">#541</a></li>
+<li>Feat: experimental shallow cloning by <a href="https://github.com/klieret">@klieret</a> in <a href="[#498]([#498]([#498](https://github.com/princeton-nlp/SWE-agent/pull/498)))">#498</a></li>
+<li>Enh: Start from clone of python conda environment for speedup by <a href="https://github.com/klieret">@klieret</a> in <a href="[#548]([#548]([#548](https://github.com/princeton-nlp/SWE-agent/pull/548)))">#548</a></li>
+<li>Enh: Use uv for editable install by default by <a href="https://github.com/klieret">@klieret</a> in <a href="[#547]([#547]([#547](https://github.com/princeton-nlp/SWE-agent/pull/547)))">#547</a></li>
 </ul>
 <h3 id="improved_1">Improved</h3>
 <ul>
-<li>Improve scrolling behavior in web UI by <a href="https://github.com/anishfish2">@anishfish2</a> in <a href="[#420]([#420](https://github.com/SWE-agent/SWE-agent/pull/420))">#420</a></li>
-<li>Web UI: Render Markdown in agent feed messages. by <a href="https://github.com/kwight">@kwight</a> in <a href="[#486]([#486](https://github.com/SWE-agent/SWE-agent/pull/486))">#486</a></li>
-<li>Enh: Remove redundant 'saved traj to X' messages by <a href="https://github.com/klieret">@klieret</a> in <a href="[#528]([#528](https://github.com/SWE-agent/SWE-agent/pull/528))">#528</a></li>
-<li>Allow to disable config dump to log by <a href="https://github.com/klieret">@klieret</a> in <a href="[#537]([#537](https://github.com/SWE-agent/SWE-agent/pull/537))">#537</a></li>
-<li>Resolve relative paths to demonstrations and commands by <a href="https://github.com/klieret">@klieret</a> in <a href="[#444]([#444](https://github.com/SWE-agent/SWE-agent/pull/444))">#444</a></li>
+<li>Improve scrolling behavior in web UI by <a href="https://github.com/anishfish2">@anishfish2</a> in <a href="[#420]([#420]([#420](https://github.com/princeton-nlp/SWE-agent/pull/420)))">#420</a></li>
+<li>Web UI: Render Markdown in agent feed messages. by <a href="https://github.com/kwight">@kwight</a> in <a href="[#486]([#486]([#486](https://github.com/princeton-nlp/SWE-agent/pull/486)))">#486</a></li>
+<li>Enh: Remove redundant 'saved traj to X' messages by <a href="https://github.com/klieret">@klieret</a> in <a href="[#528]([#528]([#528](https://github.com/princeton-nlp/SWE-agent/pull/528)))">#528</a></li>
+<li>Allow to disable config dump to log by <a href="https://github.com/klieret">@klieret</a> in <a href="[#537]([#537]([#537](https://github.com/princeton-nlp/SWE-agent/pull/537)))">#537</a></li>
+<li>Resolve relative paths to demonstrations and commands by <a href="https://github.com/klieret">@klieret</a> in <a href="[#444]([#444]([#444](https://github.com/princeton-nlp/SWE-agent/pull/444)))">#444</a></li>
 </ul>
 <h3 id="fixed_1">Fixed</h3>
 <ul>
-<li>Web UI: Remove -n option to wait by <a href="https://github.com/klieret">@klieret</a> in <a href="[#487]([#487](https://github.com/SWE-agent/SWE-agent/pull/487))">#487</a></li>
-<li>Web UI: Kill the Flask server on exit. by <a href="https://github.com/kwight">@kwight</a> in <a href="[#479]([#479](https://github.com/SWE-agent/SWE-agent/pull/479))">#479</a></li>
-<li>Web UI: Avoid proxy errors on MacOS by <a href="https://github.com/klieret">@klieret</a> in <a href="[#506]([#506](https://github.com/SWE-agent/SWE-agent/pull/506))">#506</a></li>
-<li>Ensure container_name is reset for non-persistent containers by <a href="https://github.com/klieret">@klieret</a> in <a href="[#463]([#463](https://github.com/SWE-agent/SWE-agent/pull/463))">#463</a></li>
-<li>Fix: Do not allow persistent container with cache task imgs by <a href="https://github.com/klieret">@klieret</a> in <a href="[#551]([#551](https://github.com/SWE-agent/SWE-agent/pull/551))">#551</a></li>
+<li>Web UI: Remove -n option to wait by <a href="https://github.com/klieret">@klieret</a> in <a href="[#487]([#487]([#487](https://github.com/princeton-nlp/SWE-agent/pull/487)))">#487</a></li>
+<li>Web UI: Kill the Flask server on exit. by <a href="https://github.com/kwight">@kwight</a> in <a href="[#479]([#479]([#479](https://github.com/princeton-nlp/SWE-agent/pull/479)))">#479</a></li>
+<li>Web UI: Avoid proxy errors on MacOS by <a href="https://github.com/klieret">@klieret</a> in <a href="[#506]([#506]([#506](https://github.com/princeton-nlp/SWE-agent/pull/506)))">#506</a></li>
+<li>Ensure container_name is reset for non-persistent containers by <a href="https://github.com/klieret">@klieret</a> in <a href="[#463]([#463]([#463](https://github.com/princeton-nlp/SWE-agent/pull/463)))">#463</a></li>
+<li>Fix: Do not allow persistent container with cache task imgs by <a href="https://github.com/klieret">@klieret</a> in <a href="[#551]([#551]([#551](https://github.com/princeton-nlp/SWE-agent/pull/551)))">#551</a></li>
 </ul>
 <h2 id="050-2024-05-28">0.5.0 (2024-05-28)</h2>
 <p><a href="https://github.com/SWE-agent/SWE-agent/compare/v0.4.0...v0.5.0">All new commits</a></p>
 <p>✨ The big news is our <a href="https://swe-agent.com/latest/">brand new documentation</a> ✨</p>
-<p>Secondly, @ollmer added a new flag <code>--cache_task_images</code> that will significantly speed up SWE-agent when running on the same environment/repository multiple times (no more waiting for cloning and installation!)</p>
+<p>Secondly, <a href="https://github.com/ollmer">@ollmer</a> added a new flag <code>--cache_task_images</code> that will significantly speed up SWE-agent when running on the same environment/repository multiple times (no more waiting for cloning and installation!)</p>
 <h3 id="breaking-changes_1">Breaking changes</h3>
 <ul>
 <li>We have reformatted our codebase. If you create a PR based on a previous commit, make sure you install our <code>pre-commit</code> hook to avoid merge-conflicts because of formatting. See <a href="https://swe-agent.com/latest/dev/formatting_conflicts/">our docs</a> for more information.</li>
-<li>Remove direct imports in <code>__init__.py</code> (you can no longer <code>from sweagent import Agent</code> by <a href="https://github.com/klieret">@klieret</a> in <a href="[#436]([#436](https://github.com/SWE-agent/SWE-agent/pull/436))">#436</a></li>
+<li>Remove direct imports in <code>__init__.py</code> (you can no longer <code>from sweagent import Agent</code> by <a href="https://github.com/klieret">@klieret</a> in <a href="[#436]([#436]([#436](https://github.com/princeton-nlp/SWE-agent/pull/436)))">#436</a></li>
 </ul>
-<h3 id="added_1">Added</h3>
+<h3 id="added_3">Added</h3>
 <ul>
 <li>Running the web UI is now supported when running swe-agent completely in docker</li>
-<li>Speed up evaluation by caching task environments as docker images by <a href="https://github.com/ollmer">@ollmer</a> in <a href="[#317]([#317](https://github.com/SWE-agent/SWE-agent/pull/317))">#317</a></li>
+<li>Speed up evaluation by caching task environments as docker images by <a href="https://github.com/ollmer">@ollmer</a> in <a href="[#317]([#317]([#317](https://github.com/princeton-nlp/SWE-agent/pull/317)))">#317</a></li>
 </ul>
 <h3 id="improved_2">Improved</h3>
 <ul>
-<li>Add gpt-4o model by <a href="https://github.com/raymyers">@raymyers</a> in <a href="[#344]([#344](https://github.com/SWE-agent/SWE-agent/pull/344))">#344</a></li>
-<li>Web: Allow to specify commit hash by <a href="https://github.com/klieret">@klieret</a> in <a href="[#358]([#358](https://github.com/SWE-agent/SWE-agent/pull/358))">#358</a></li>
-<li>Add default environment_setup config by <a href="https://github.com/klieret">@klieret</a> in <a href="[#351]([#351](https://github.com/SWE-agent/SWE-agent/pull/351))">#351</a></li>
-<li>Enh: Suppress openai logging; improve formatting of stats by <a href="https://github.com/klieret">@klieret</a> in <a href="[#416]([#416](https://github.com/SWE-agent/SWE-agent/pull/416))">#416</a></li>
-<li>Remove signal dependency by <a href="https://github.com/klieret">@klieret</a> in <a href="[#428]([#428](https://github.com/SWE-agent/SWE-agent/pull/428))">#428</a></li>
-<li>Do not use select if running on Windows by <a href="https://github.com/klieret">@klieret</a> in <a href="[#429]([#429](https://github.com/SWE-agent/SWE-agent/pull/429))">#429</a></li>
-<li>Use custom Config class to support env and keys.cfg (this allows passing keys as environment variables) by <a href="https://github.com/klieret">@klieret</a> in <a href="[#430]([#430](https://github.com/SWE-agent/SWE-agent/pull/430))">#430</a></li>
+<li>Add gpt-4o model by <a href="https://github.com/raymyers">@raymyers</a> in <a href="[#344]([#344]([#344](https://github.com/princeton-nlp/SWE-agent/pull/344)))">#344</a></li>
+<li>Web: Allow to specify commit hash by <a href="https://github.com/klieret">@klieret</a> in <a href="[#358]([#358]([#358](https://github.com/princeton-nlp/SWE-agent/pull/358)))">#358</a></li>
+<li>Add default environment_setup config by <a href="https://github.com/klieret">@klieret</a> in <a href="[#351]([#351]([#351](https://github.com/princeton-nlp/SWE-agent/pull/351)))">#351</a></li>
+<li>Enh: Suppress openai logging; improve formatting of stats by <a href="https://github.com/klieret">@klieret</a> in <a href="[#416]([#416]([#416](https://github.com/princeton-nlp/SWE-agent/pull/416)))">#416</a></li>
+<li>Remove signal dependency by <a href="https://github.com/klieret">@klieret</a> in <a href="[#428]([#428]([#428](https://github.com/princeton-nlp/SWE-agent/pull/428)))">#428</a></li>
+<li>Do not use select if running on Windows by <a href="https://github.com/klieret">@klieret</a> in <a href="[#429]([#429]([#429](https://github.com/princeton-nlp/SWE-agent/pull/429)))">#429</a></li>
+<li>Use custom Config class to support env and keys.cfg (this allows passing keys as environment variables) by <a href="https://github.com/klieret">@klieret</a> in <a href="[#430]([#430]([#430](https://github.com/princeton-nlp/SWE-agent/pull/430)))">#430</a></li>
 </ul>
 <h3 id="fixed_2">Fixed</h3>
 <ul>
-<li>Web: Fix script_path input by <a href="https://github.com/klieret">@klieret</a> in <a href="[#334]([#334](https://github.com/SWE-agent/SWE-agent/pull/334))">#334</a></li>
-<li>Fix: Don't print patch msg for exit_cost patch by <a href="https://github.com/klieret">@klieret</a> in <a href="[#343]([#343](https://github.com/SWE-agent/SWE-agent/pull/343))">#343</a></li>
-<li>Fix: Do not request job control in bash by <a href="https://github.com/klieret">@klieret</a> in <a href="[#345]([#345](https://github.com/SWE-agent/SWE-agent/pull/345))">#345</a></li>
-<li>Fix: --base_commit not used for gh urls by <a href="https://github.com/klieret">@klieret</a> in <a href="[#346]([#346](https://github.com/SWE-agent/SWE-agent/pull/346))">#346</a></li>
-<li>Fix: Separate data path/traj dir cause exception by <a href="https://github.com/klieret">@klieret</a> in <a href="[#348]([#348](https://github.com/SWE-agent/SWE-agent/pull/348))">#348</a></li>
-<li>Add docker-py lower bound by <a href="https://github.com/klieret">@klieret</a> in <a href="[#406]([#406](https://github.com/SWE-agent/SWE-agent/pull/406))">#406</a></li>
-<li>Fix: IndexError when replaying incomplete trajectories by <a href="https://github.com/klieret">@klieret</a> in <a href="[#410]([#410](https://github.com/SWE-agent/SWE-agent/pull/410))">#410</a></li>
+<li>Web: Fix script_path input by <a href="https://github.com/klieret">@klieret</a> in <a href="[#334]([#334]([#334](https://github.com/princeton-nlp/SWE-agent/pull/334)))">#334</a></li>
+<li>Fix: Don't print patch msg for exit_cost patch by <a href="https://github.com/klieret">@klieret</a> in <a href="[#343]([#343]([#343](https://github.com/princeton-nlp/SWE-agent/pull/343)))">#343</a></li>
+<li>Fix: Do not request job control in bash by <a href="https://github.com/klieret">@klieret</a> in <a href="[#345]([#345]([#345](https://github.com/princeton-nlp/SWE-agent/pull/345)))">#345</a></li>
+<li>Fix: --base_commit not used for gh urls by <a href="https://github.com/klieret">@klieret</a> in <a href="[#346]([#346]([#346](https://github.com/princeton-nlp/SWE-agent/pull/346)))">#346</a></li>
+<li>Fix: Separate data path/traj dir cause exception by <a href="https://github.com/klieret">@klieret</a> in <a href="[#348]([#348]([#348](https://github.com/princeton-nlp/SWE-agent/pull/348)))">#348</a></li>
+<li>Add docker-py lower bound by <a href="https://github.com/klieret">@klieret</a> in <a href="[#406]([#406]([#406](https://github.com/princeton-nlp/SWE-agent/pull/406)))">#406</a></li>
+<li>Fix: IndexError when replaying incomplete trajectories by <a href="https://github.com/klieret">@klieret</a> in <a href="[#410]([#410]([#410](https://github.com/princeton-nlp/SWE-agent/pull/410)))">#410</a></li>
 </ul>
 <h2 id="040-2024-05-09">0.4.0 (2024-05-09)</h2>
 <p><a href="https://github.com/SWE-agent/SWE-agent/compare/v0.3.0...v0.4.0">All new commits</a></p>
-<h3 id="added_2">Added</h3>
+<h3 id="added_4">Added</h3>
 <p>We’re excited to launch the SWE-agent web UI! Specify a bug, press start and watch SWE-agent do the magic.</p>
 <h2 id="030-2024-05-02">0.3.0 (2024-05-02)</h2>
-<h3 id="added_3">Added</h3>
+<h3 id="added_5">Added</h3>
 <ul>
 <li>Run SWE-agent in the cloud using GitHub Codespaces</li>
-<li>Add GPT4-turbo model by <a href="https://github.com/zgrannan">@zgrannan</a> in <a href="[#252]([#252](https://github.com/SWE-agent/SWE-agent/pull/252))">#252</a></li>
-<li>feat: Amazon Bedrock support (Claude models) by <a href="https://github.com/JGalego">@JGalego</a> in <a href="[#207]([#207](https://github.com/SWE-agent/SWE-agent/pull/207))">#207</a></li>
+<li>Add GPT4-turbo model by <a href="https://github.com/zgrannan">@zgrannan</a> in <a href="[#252]([#252]([#252](https://github.com/princeton-nlp/SWE-agent/pull/252)))">#252</a></li>
+<li>feat: Amazon Bedrock support (Claude models) by <a href="https://github.com/JGalego">@JGalego</a> in <a href="[#207]([#207]([#207](https://github.com/princeton-nlp/SWE-agent/pull/207)))">#207</a></li>
 </ul>
 <h3 id="fixed_3">Fixed</h3>
 <ul>
-<li>Better error handling for --open_pr by <a href="https://github.com/klieret">@klieret</a> in <a href="[#239]([#239](https://github.com/SWE-agent/SWE-agent/pull/239))">#239</a></li>
-<li>Fixed a potential error by <a href="https://github.com/DanjieTang">@DanjieTang</a> in <a href="[#242]([#242](https://github.com/SWE-agent/SWE-agent/pull/242))">#242</a></li>
-<li>fix: TARGETARCH not set on some OS/docker setups by <a href="https://github.com/mspronesti">@mspronesti</a> in <a href="[#249]([#249](https://github.com/SWE-agent/SWE-agent/pull/249))">#249</a></li>
-<li>Pass Python version to get_environment_yml by <a href="https://github.com/waterson">@waterson</a> in <a href="[#271]([#271](https://github.com/SWE-agent/SWE-agent/pull/271))">#271</a></li>
-<li>Fix Together model validation error by <a href="https://github.com/mikanfactory">@mikanfactory</a> in <a href="[#236]([#236](https://github.com/SWE-agent/SWE-agent/pull/236))">#236</a></li>
-<li>Doc: Avoid invalid github token by <a href="https://github.com/klieret">@klieret</a> in <a href="[#292]([#292](https://github.com/SWE-agent/SWE-agent/pull/292))">#292</a></li>
+<li>Better error handling for --open_pr by <a href="https://github.com/klieret">@klieret</a> in <a href="[#239]([#239]([#239](https://github.com/princeton-nlp/SWE-agent/pull/239)))">#239</a></li>
+<li>Fixed a potential error by <a href="https://github.com/DanjieTang">@DanjieTang</a> in <a href="[#242]([#242]([#242](https://github.com/princeton-nlp/SWE-agent/pull/242)))">#242</a></li>
+<li>fix: TARGETARCH not set on some OS/docker setups by <a href="https://github.com/mspronesti">@mspronesti</a> in <a href="[#249]([#249]([#249](https://github.com/princeton-nlp/SWE-agent/pull/249)))">#249</a></li>
+<li>Pass Python version to get_environment_yml by <a href="https://github.com/waterson">@waterson</a> in <a href="[#271]([#271]([#271](https://github.com/princeton-nlp/SWE-agent/pull/271)))">#271</a></li>
+<li>Fix Together model validation error by <a href="https://github.com/mikanfactory">@mikanfactory</a> in <a href="[#236]([#236]([#236](https://github.com/princeton-nlp/SWE-agent/pull/236)))">#236</a></li>
+<li>Doc: Avoid invalid github token by <a href="https://github.com/klieret">@klieret</a> in <a href="[#292]([#292]([#292](https://github.com/princeton-nlp/SWE-agent/pull/292)))">#292</a></li>
 </ul>
 <h2 id="020-2024-04-15">0.2.0 (2024-04-15)</h2>
 <p><a href="https://github.com/SWE-agent/SWE-agent/compare/v0.1.2...v0.2.0">All new commits</a></p>
-<h3 id="added_4">Added</h3>
+<h3 id="added_6">Added</h3>
 <ul>
-<li>Allow to run on local repos (new flag: <code>--repo_path</code>) in <a href="[#193]([#193](https://github.com/SWE-agent/SWE-agent/pull/193))">#193</a></li>
-<li>Patch files are now saved separately to a patch directory in <a href="[#126]([#126](https://github.com/SWE-agent/SWE-agent/pull/126))">#126</a></li>
-<li>Allow to supply custom installation commands when running on gh issues or locally (<code>--environment_setup</code>) in <a href="[#153]([#153](https://github.com/SWE-agent/SWE-agent/pull/153))">#153</a></li>
-<li>Allow to specify openapi base url in <code>keys.cfg</code> in <a href="[#118]([#118](https://github.com/SWE-agent/SWE-agent/pull/118))">#118</a></li>
+<li>Allow to run on local repos (new flag: <code>--repo_path</code>) in <a href="[#193]([#193]([#193](https://github.com/princeton-nlp/SWE-agent/pull/193)))">#193</a></li>
+<li>Patch files are now saved separately to a patch directory in <a href="[#126]([#126]([#126](https://github.com/princeton-nlp/SWE-agent/pull/126)))">#126</a></li>
+<li>Allow to supply custom installation commands when running on gh issues or locally (<code>--environment_setup</code>) in <a href="[#153]([#153]([#153](https://github.com/princeton-nlp/SWE-agent/pull/153)))">#153</a></li>
+<li>Allow to specify openapi base url in <code>keys.cfg</code> in <a href="[#118]([#118]([#118](https://github.com/princeton-nlp/SWE-agent/pull/118)))">#118</a></li>
 </ul>
 <h3 id="improved_3">Improved</h3>
 <ul>
-<li>Improve error handling of docker issues in <a href="[#165]([#165](https://github.com/SWE-agent/SWE-agent/pull/165))">#165</a></li>
-<li>Make github token fully optional in <a href="[#189]([#189](https://github.com/SWE-agent/SWE-agent/pull/189))">#189</a></li>
+<li>Improve error handling of docker issues in <a href="[#165]([#165]([#165](https://github.com/princeton-nlp/SWE-agent/pull/165)))">#165</a></li>
+<li>Make github token fully optional in <a href="[#189]([#189]([#189](https://github.com/princeton-nlp/SWE-agent/pull/189)))">#189</a></li>
 </ul>
 <h3 id="fixed_4">Fixed</h3>
 <ul>
-<li>Fix opening PR from fork in <a href="[#229]([#229](https://github.com/SWE-agent/SWE-agent/pull/229))">#229</a></li>
-<li>Fix: Choosing TogetherAI models in <a href="[#130]([#130](https://github.com/SWE-agent/SWE-agent/pull/130))">#130</a></li>
+<li>Fix opening PR from fork in <a href="[#229]([#229]([#229](https://github.com/princeton-nlp/SWE-agent/pull/229)))">#229</a></li>
+<li>Fix: Choosing TogetherAI models in <a href="[#130]([#130]([#130](https://github.com/princeton-nlp/SWE-agent/pull/130)))">#130</a></li>
 </ul>
 
 
@@ -2686,6 +3214,8 @@ We also solve a bug where existing linter errors in a file left SWE-agent unable
 
 
 
+
+  
 
 
 
@@ -2770,10 +3300,14 @@ We also solve a bug where existing linter errors in a file left SWE-agent unable
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.top", "content.action.edit", "navigation.footer", "content.code.copy", "content.footnote.tooltips", "header.autohide", "announce.dismiss", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.top", "content.action.edit", "navigation.footer", "content.code.copy", "content.footnote.tooltips", "header.autohide", "announce.dismiss", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../assets/js/sh-annotation.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});

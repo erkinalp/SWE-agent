@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -37,7 +37,7 @@
   
   
   
-  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-12 6 6-6-6-6-1.4 1.4 4.6 4.6-4.6 4.6z"/></svg>');}</style>
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010m-12%206%206-6-6-6-1.4%201.4%204.6%204.6-4.6%204.6z%22/%3E%3C/svg%3E');}</style>
 
 
     
@@ -65,6 +65,16 @@
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-SG2NC1GDRD"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-SG2NC1GDRD",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-SG2NC1GDRD",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
     
     
@@ -113,7 +123,7 @@
               </button>
             
             
-This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/installation/migration/">New features + migration guide.</a>
+SWE-agent 1.0 is the open source SOTA on SWE-bench lite! <a href="https://swe-agent.com/latest/installation/migration/">New features + migration guide.</a>
 
           </div>
           
@@ -201,11 +211,13 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -237,13 +249,14 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
         <a href="https://github.com/SWE-agent/SWE-agent" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     SWE-agent/SWE-agent
@@ -263,11 +276,13 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../.." class="md-tabs__link">
           
+  
   
     
   
@@ -283,11 +298,13 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../usage/" class="md-tabs__link">
           
+  
   
     
   
@@ -302,6 +319,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         
   
   
+  
     
   
   
@@ -310,6 +328,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../" class="md-tabs__link">
           
+  
   
     
   
@@ -361,7 +380,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="https://github.com/SWE-agent/SWE-agent" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     SWE-agent/SWE-agent
@@ -392,6 +411,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
       
     
@@ -403,13 +423,14 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../.." class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     Getting Started
+    
   </span>
   
 
@@ -458,6 +479,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
       
     
@@ -469,13 +491,14 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../../installation/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     Installation
+    
   </span>
   
 
@@ -507,8 +530,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../installation/source/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     From source
+    
   </span>
   
 
@@ -528,8 +553,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../installation/codespaces/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     In browser
+    
   </span>
   
 
@@ -549,8 +576,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../installation/keys/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Models and keys
+    
   </span>
   
 
@@ -570,8 +599,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../installation/migration/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     1.0 migration
+    
   </span>
   
 
@@ -591,8 +622,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../installation/tips/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Troubleshooting
+    
   </span>
   
 
@@ -612,8 +645,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../installation/changelog/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Changelog
+    
   </span>
   
 
@@ -652,6 +687,9 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
         
       
+        
+      
+    
     
     
       
@@ -668,8 +706,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
           <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Tutorials
+    
   </span>
   
 
@@ -693,8 +733,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../usage/hello_world/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Hello world
+    
   </span>
   
 
@@ -714,8 +756,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../usage/cl_tutorial/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Command line basics
+    
   </span>
   
 
@@ -735,8 +779,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../usage/coding_challenges/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Solving coding challenges
+    
   </span>
   
 
@@ -756,8 +802,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../usage/inspector/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Trajectory inspector
+    
   </span>
   
 
@@ -777,8 +825,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../usage/batch_mode/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Batch mode
+    
   </span>
   
 
@@ -795,11 +845,36 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   
   
     <li class="md-nav__item">
-      <a href="../../usage/benchmarking/" class="md-nav__link">
+      <a href="../../usage/competitive_runs/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Benchmarking
+    Competitive runs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/whats_next/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What's next?
+    
   </span>
   
 
@@ -827,8 +902,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../faq/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FAQ
+    
   </span>
   
 
@@ -866,6 +943,9 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
         
       
+        
+      
+    
     
     
       
@@ -879,13 +959,14 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../../usage/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     User Guides
+    
   </span>
   
 
@@ -926,6 +1007,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
       
     
@@ -937,13 +1019,14 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../../background/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     Project overview
+    
   </span>
   
 
@@ -975,8 +1058,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../background/architecture/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Architecture
+    
   </span>
   
 
@@ -996,8 +1081,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../background/aci/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Agent tools
+    
   </span>
   
 
@@ -1022,11 +1109,36 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   
   
     <li class="md-nav__item">
+      <a href="../../usage/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Command line interface
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../usage/trajectories/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Output files
+    
   </span>
   
 
@@ -1055,6 +1167,13 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
         
       
+        
+      
+        
+      
+        
+      
+    
     
     
       
@@ -1065,30 +1184,31 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
         
-          
           
           <div class="md-nav__link md-nav__container">
             <a href="../../config/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     Configuration
+    
   </span>
   
 
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             Configuration
           </label>
@@ -1106,8 +1226,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../config/config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Config files
+    
   </span>
   
 
@@ -1127,8 +1249,33 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../config/templates/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Templates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Models
+    
   </span>
   
 
@@ -1148,8 +1295,56 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../config/demonstrations/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Demonstrations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/environments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Environments
+    
   </span>
   
 
@@ -1182,6 +1377,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
       
     
@@ -1190,22 +1386,24 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
         
           
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Development
+    
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             Development
           </label>
@@ -1221,8 +1419,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../dev/contribute/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Contribution guide
+    
   </span>
   
 
@@ -1242,8 +1442,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../../dev/formatting_conflicts/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Formatting conflicts
+    
   </span>
   
 
@@ -1297,6 +1499,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
         
         
@@ -1311,13 +1514,14 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
     API Reference
+    
   </span>
   
 
@@ -1354,6 +1558,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
       
     
@@ -1368,8 +1573,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Run config
+    
   </span>
   
 
@@ -1393,8 +1600,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../run_single_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Run single
+    
   </span>
   
 
@@ -1414,8 +1623,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../run_batch_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Run batch
+    
   </span>
   
 
@@ -1452,6 +1663,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
       
     
@@ -1466,8 +1678,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Instance config
+    
   </span>
   
 
@@ -1491,8 +1705,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../problem_statements/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Problem statements
+    
   </span>
   
 
@@ -1521,8 +1737,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
     Repository
+    
   </span>
   
 
@@ -1532,8 +1750,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
     Repository
+    
   </span>
   
 
@@ -1595,6 +1815,15 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   <a href="#sweagent.environment.repo.PreExistingRepoConfig.copy" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;copy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.environment.repo.PreExistingRepoConfig.get_reset_commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;get_reset_commands
     </span>
   </a>
   
@@ -1669,6 +1898,15 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sweagent.environment.repo.LocalRepoConfig.get_reset_commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;get_reset_commands
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1738,6 +1976,15 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sweagent.environment.repo.GithubRepoConfig.get_reset_commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;get_reset_commands
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1771,8 +2018,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../batch_instances/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Batch instances
+    
   </span>
   
 
@@ -1809,6 +2058,9 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
         
       
+        
+      
+    
     
     
       
@@ -1825,8 +2077,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
           <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Agent config
+    
   </span>
   
 
@@ -1850,8 +2104,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../agent_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Agent config
+    
   </span>
   
 
@@ -1871,8 +2127,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../model_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Model config
+    
   </span>
   
 
@@ -1892,8 +2150,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../template_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Templates
+    
   </span>
   
 
@@ -1913,8 +2173,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../tools_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Tools
+    
   </span>
   
 
@@ -1934,8 +2196,33 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../history_processor_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     History processors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parsers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Action parsers
+    
   </span>
   
 
@@ -1963,8 +2250,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../env_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Environment config
+    
   </span>
   
 
@@ -1984,8 +2273,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../bundle_config/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Tool bundle config
+    
   </span>
   
 
@@ -2012,6 +2303,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       
     
     
+    
       
       
     
@@ -2026,8 +2318,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
           <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Classes
+    
   </span>
   
 
@@ -2051,8 +2345,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../agent/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Agent class
+    
   </span>
   
 
@@ -2072,8 +2368,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../env/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Environment class
+    
   </span>
   
 
@@ -2093,8 +2391,10 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
       <a href="../exceptions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Exceptions
+    
   </span>
   
 
@@ -2191,6 +2491,15 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sweagent.environment.repo.PreExistingRepoConfig.get_reset_commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;get_reset_commands
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2255,6 +2564,15 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   <a href="#sweagent.environment.repo.LocalRepoConfig.copy" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;copy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sweagent.environment.repo.LocalRepoConfig.get_reset_commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;get_reset_commands
     </span>
   </a>
   
@@ -2329,6 +2647,15 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sweagent.environment.repo.GithubRepoConfig.get_reset_commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;get_reset_commands
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2356,6 +2683,7 @@ This is the pre-release of SWE-agent 1.0. <a href="https://swe-agent.com/latest/
               <article class="md-content__inner md-typeset">
                 
                   
+
 
   
     <a href="https://github.com/SWE-agent/SWE-agent/edit/main/docs/reference/repo.md" title="Edit this page" class="md-content__button md-icon">
@@ -2411,21 +2739,36 @@ This is important because we need to cd to the repo before running the agent.</p
     
       <p>Config:</p>
       <ul>
-          <li><code>extra</code>: <code class="highlight language-python"><span class="s1">&#39;forbid&#39;</span></code></li>
+          <li><code>extra</code>: <code class="highlight language-python"><span class="n">forbid</span></code></li>
       </ul>
 
         <p>Fields:</p>
         <ul>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.environment.repo.PreExistingRepoConfig.repo_name" href="#sweagent.environment.repo.PreExistingRepoConfig.repo_name">repo_name</a></code>
-                (<code>str</code>)
+              <code><a class="autorefs autorefs-internal" title="            repo_name
+
+
+  
+      pydantic-field
+   (sweagent.environment.repo.PreExistingRepoConfig.repo_name)" href="#sweagent.environment.repo.PreExistingRepoConfig.repo_name">repo_name</a></code>
+                (<code><span title="str">str</span></code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.environment.repo.PreExistingRepoConfig.base_commit" href="#sweagent.environment.repo.PreExistingRepoConfig.base_commit">base_commit</a></code>
-                (<code>str</code>)
+              <code><a class="autorefs autorefs-internal" title="            base_commit
+
+
+  
+      pydantic-field
+   (sweagent.environment.repo.PreExistingRepoConfig.base_commit)" href="#sweagent.environment.repo.PreExistingRepoConfig.base_commit">base_commit</a></code>
+                (<code><span title="str">str</span></code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.environment.repo.PreExistingRepoConfig.type" href="#sweagent.environment.repo.PreExistingRepoConfig.type">type</a></code>
+              <code><a class="autorefs autorefs-internal" title="            type
+
+
+  
+      pydantic-field
+   (sweagent.environment.repo.PreExistingRepoConfig.type)" href="#sweagent.environment.repo.PreExistingRepoConfig.type">type</a></code>
                 (<code><span title="typing.Literal">Literal</span>[&#39;preexisting&#39;]</code>)
             </li>
         </ul>
@@ -2454,7 +2797,7 @@ This is important because we need to cd to the repo before running the agent.</p
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">base_commit</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="s1">&#39;HEAD&#39;</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">base_commit</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="s1">&#39;HEAD&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -2463,6 +2806,7 @@ This is important because we need to cd to the repo before running the agent.</p
 i.e., the latest commit. You can also set this to a branch name (e.g., <code>dev</code>),
 a tag (e.g., <code>v0.1.0</code>), or a commit hash (e.g., <code>a4464baca1f</code>).
 SWE-agent will then start from this commit when trying to solve the problem.</p>
+
     </div>
 
 </div>
@@ -2480,12 +2824,13 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">repo_name</span><span class="p">:</span> <span class="n">str</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">repo_name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>The repo name (the repository must be located at the root of the deployment).</p>
+
     </div>
 
 </div>
@@ -2509,6 +2854,7 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
     <div class="doc doc-contents ">
 
         <p>Discriminator for (de)serialization/CLI. Do not change.</p>
+
     </div>
 
 </div>
@@ -2530,13 +2876,43 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
         <p>Does nothing.</p>
 
+
             <details class="quote">
               <summary>Source code in <code>sweagent/environment/repo.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deployment</span><span class="p">:</span> <span class="n">AbstractDeployment</span><span class="p">):</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deployment</span><span class="p">:</span> <span class="n">AbstractDeployment</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Does nothing.&quot;&quot;&quot;</span>
     <span class="k">pass</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="sweagent.environment.repo.PreExistingRepoConfig.get_reset_commands" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">get_reset_commands</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_reset_commands</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Issued after the copy operation or when the environment is reset.</p>
+
+
+            <details class="quote">
+              <summary>Source code in <code>sweagent/environment/repo.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_reset_commands</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Issued after the copy operation or when the environment is reset.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_get_git_reset_commands</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_commit</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
             </details>
     </div>
@@ -2571,26 +2947,37 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
     
       <p>Config:</p>
       <ul>
-          <li><code>extra</code>: <code class="highlight language-python"><span class="s1">&#39;forbid&#39;</span></code></li>
+          <li><code>extra</code>: <code class="highlight language-python"><span class="n">forbid</span></code></li>
       </ul>
 
         <p>Fields:</p>
         <ul>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.environment.repo.LocalRepoConfig.path" href="#sweagent.environment.repo.LocalRepoConfig.path">path</a></code>
+              <code><a class="autorefs autorefs-internal" title="            path
+
+
+  
+      pydantic-field
+   (sweagent.environment.repo.LocalRepoConfig.path)" href="#sweagent.environment.repo.LocalRepoConfig.path">path</a></code>
                 (<code><span title="pathlib.Path">Path</span></code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.environment.repo.LocalRepoConfig.base_commit" href="#sweagent.environment.repo.LocalRepoConfig.base_commit">base_commit</a></code>
-                (<code>str</code>)
+              <code><a class="autorefs autorefs-internal" title="            base_commit
+
+
+  
+      pydantic-field
+   (sweagent.environment.repo.LocalRepoConfig.base_commit)" href="#sweagent.environment.repo.LocalRepoConfig.base_commit">base_commit</a></code>
+                (<code><span title="str">str</span></code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.environment.repo.LocalRepoConfig.type" href="#sweagent.environment.repo.LocalRepoConfig.type">type</a></code>
+              <code><a class="autorefs autorefs-internal" title="            type
+
+
+  
+      pydantic-field
+   (sweagent.environment.repo.LocalRepoConfig.type)" href="#sweagent.environment.repo.LocalRepoConfig.type">type</a></code>
                 (<code><span title="typing.Literal">Literal</span>[&#39;local&#39;]</code>)
-            </li>
-            <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.environment.repo.LocalRepoConfig.repo_name" href="#sweagent.environment.repo.LocalRepoConfig.repo_name">repo_name</a></code>
-                (<code>str</code>)
             </li>
         </ul>
 
@@ -2618,7 +3005,7 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">base_commit</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="s1">&#39;HEAD&#39;</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">base_commit</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="s1">&#39;HEAD&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -2627,6 +3014,7 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 i.e., the latest commit. You can also set this to a branch name (e.g., <code>dev</code>),
 a tag (e.g., <code>v0.1.0</code>), or a commit hash (e.g., <code>a4464baca1f</code>).
 SWE-agent will then start from this commit when trying to solve the problem.</p>
+
     </div>
 
 </div>
@@ -2648,6 +3036,7 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
     </div>
 
 </div>
@@ -2661,16 +3050,17 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
 
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">repo_name</span><span class="p">:</span> <span class="n">str</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">repo_name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Set automatically based on the repository name. Cannot be set.</p>
+
     </div>
 
 </div>
@@ -2694,6 +3084,7 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
     <div class="doc doc-contents ">
 
         <p>Discriminator for (de)serialization/CLI. Do not change.</p>
+
     </div>
 
 </div>
@@ -2713,23 +3104,24 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
     <div class="doc doc-contents ">
 
+
             <details class="quote">
               <summary>Source code in <code>sweagent/environment/repo.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span>
-<span class="normal">83</span>
-<span class="normal">84</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">check_valid_repo</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span>
+<span class="normal">95</span>
+<span class="normal">96</span>
+<span class="normal">97</span>
+<span class="normal">98</span>
+<span class="normal">99</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">check_valid_repo</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">repo</span> <span class="o">=</span> <span class="n">GitRepo</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="n">search_parent_directories</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="k">except</span> <span class="n">InvalidGitRepositoryError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Could not find git repository at </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="si">=}</span><span class="s2">.&quot;</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
     <span class="k">if</span> <span class="n">repo</span><span class="o">.</span><span class="n">is_dirty</span><span class="p">()</span> <span class="ow">and</span> <span class="s2">&quot;PYTEST_CURRENT_TEST&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Local git repository </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="si">}</span><span class="s2"> is dirty. Please commit or stash changes.&quot;</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
@@ -2753,17 +3145,18 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
     <div class="doc doc-contents ">
 
+
             <details class="quote">
               <summary>Source code in <code>sweagent/environment/repo.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">86</span>
-<span class="normal">87</span>
-<span class="normal">88</span>
-<span class="normal">89</span>
-<span class="normal">90</span>
-<span class="normal">91</span>
-<span class="normal">92</span>
-<span class="normal">93</span>
-<span class="normal">94</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deployment</span><span class="p">:</span> <span class="n">AbstractDeployment</span><span class="p">):</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deployment</span><span class="p">:</span> <span class="n">AbstractDeployment</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">check_valid_repo</span><span class="p">()</span>
     <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
         <span class="n">deployment</span><span class="o">.</span><span class="n">runtime</span><span class="o">.</span><span class="n">upload</span><span class="p">(</span><span class="n">UploadRequest</span><span class="p">(</span><span class="n">source_path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">),</span> <span class="n">target_path</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">repo_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
@@ -2772,6 +3165,35 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
     <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Failed to change permissions on copied repository (exit code: </span><span class="si">{</span><span class="n">r</span><span class="o">.</span><span class="n">exit_code</span><span class="si">}</span><span class="s2">, stdout: </span><span class="si">{</span><span class="n">r</span><span class="o">.</span><span class="n">stdout</span><span class="si">}</span><span class="s2">, stderr: </span><span class="si">{</span><span class="n">r</span><span class="o">.</span><span class="n">stderr</span><span class="si">}</span><span class="s2">)&quot;</span>
         <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="sweagent.environment.repo.LocalRepoConfig.get_reset_commands" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">get_reset_commands</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_reset_commands</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Issued after the copy operation or when the environment is reset.</p>
+
+
+            <details class="quote">
+              <summary>Source code in <code>sweagent/environment/repo.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_reset_commands</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Issued after the copy operation or when the environment is reset.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_get_git_reset_commands</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_commit</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
             </details>
     </div>
@@ -2806,30 +3228,46 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
     
       <p>Config:</p>
       <ul>
-          <li><code>extra</code>: <code class="highlight language-python"><span class="s1">&#39;forbid&#39;</span></code></li>
+          <li><code>extra</code>: <code class="highlight language-python"><span class="n">forbid</span></code></li>
       </ul>
 
         <p>Fields:</p>
         <ul>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.environment.repo.GithubRepoConfig.github_url" href="#sweagent.environment.repo.GithubRepoConfig.github_url">github_url</a></code>
-                (<code>str</code>)
+              <code><a class="autorefs autorefs-internal" title="            github_url
+
+
+  
+      pydantic-field
+   (sweagent.environment.repo.GithubRepoConfig.github_url)" href="#sweagent.environment.repo.GithubRepoConfig.github_url">github_url</a></code>
+                (<code><span title="str">str</span></code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.environment.repo.GithubRepoConfig.base_commit" href="#sweagent.environment.repo.GithubRepoConfig.base_commit">base_commit</a></code>
-                (<code>str</code>)
+              <code><a class="autorefs autorefs-internal" title="            base_commit
+
+
+  
+      pydantic-field
+   (sweagent.environment.repo.GithubRepoConfig.base_commit)" href="#sweagent.environment.repo.GithubRepoConfig.base_commit">base_commit</a></code>
+                (<code><span title="str">str</span></code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.environment.repo.GithubRepoConfig.clone_timeout" href="#sweagent.environment.repo.GithubRepoConfig.clone_timeout">clone_timeout</a></code>
-                (<code>float</code>)
+              <code><a class="autorefs autorefs-internal" title="            clone_timeout
+
+
+  
+      pydantic-field
+   (sweagent.environment.repo.GithubRepoConfig.clone_timeout)" href="#sweagent.environment.repo.GithubRepoConfig.clone_timeout">clone_timeout</a></code>
+                (<code><span title="float">float</span></code>)
             </li>
             <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.environment.repo.GithubRepoConfig.type" href="#sweagent.environment.repo.GithubRepoConfig.type">type</a></code>
+              <code><a class="autorefs autorefs-internal" title="            type
+
+
+  
+      pydantic-field
+   (sweagent.environment.repo.GithubRepoConfig.type)" href="#sweagent.environment.repo.GithubRepoConfig.type">type</a></code>
                 (<code><span title="typing.Literal">Literal</span>[&#39;github&#39;]</code>)
-            </li>
-            <li>
-              <code><a class="autorefs autorefs-internal" title="sweagent.environment.repo.GithubRepoConfig.repo_name" href="#sweagent.environment.repo.GithubRepoConfig.repo_name">repo_name</a></code>
-                (<code>str</code>)
             </li>
         </ul>
 
@@ -2857,7 +3295,7 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">base_commit</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="s1">&#39;HEAD&#39;</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">base_commit</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="s1">&#39;HEAD&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -2866,6 +3304,7 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 i.e., the latest commit. You can also set this to a branch name (e.g., <code>dev</code>),
 a tag (e.g., <code>v0.1.0</code>), or a commit hash (e.g., <code>a4464baca1f</code>).
 SWE-agent will then start from this commit when trying to solve the problem.</p>
+
     </div>
 
 </div>
@@ -2883,12 +3322,13 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">clone_timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="mi">500</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">clone_timeout</span><span class="p">:</span> <span class="n"><span title="float">float</span></span> <span class="o">=</span> <span class="mi">500</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Timeout for git clone operation.</p>
+
     </div>
 
 </div>
@@ -2906,10 +3346,11 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">github_url</span><span class="p">:</span> <span class="n">str</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">github_url</span><span class="p">:</span> <span class="n"><span title="str">str</span></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
     </div>
 
 </div>
@@ -2923,14 +3364,15 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
 
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-pydantic-field"><code>pydantic-field</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">repo_name</span><span class="p">:</span> <span class="n">str</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">repo_name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
+
     </div>
 
 </div>
@@ -2954,6 +3396,7 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
     <div class="doc doc-contents ">
 
         <p>Discriminator for (de)serialization/CLI. Do not change.</p>
+
     </div>
 
 </div>
@@ -2975,33 +3418,34 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
         <p>Clones the repository to the sandbox.</p>
 
+
             <details class="quote">
               <summary>Source code in <code>sweagent/environment/repo.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">134</span>
-<span class="normal">135</span>
-<span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span>
-<span class="normal">144</span>
-<span class="normal">145</span>
-<span class="normal">146</span>
-<span class="normal">147</span>
-<span class="normal">148</span>
-<span class="normal">149</span>
-<span class="normal">150</span>
-<span class="normal">151</span>
-<span class="normal">152</span>
-<span class="normal">153</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">153</span>
 <span class="normal">154</span>
 <span class="normal">155</span>
 <span class="normal">156</span>
 <span class="normal">157</span>
-<span class="normal">158</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deployment</span><span class="p">:</span> <span class="n">AbstractDeployment</span><span class="p">):</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deployment</span><span class="p">:</span> <span class="n">AbstractDeployment</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Clones the repository to the sandbox.&quot;&quot;&quot;</span>
     <span class="n">base_commit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_commit</span>
     <span class="n">github_token</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;GITHUB_TOKEN&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
@@ -3032,6 +3476,35 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
 </div>
 
+<div class="doc doc-object doc-function">
+
+
+<h3 id="sweagent.environment.repo.GithubRepoConfig.get_reset_commands" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">get_reset_commands</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_reset_commands</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Issued after the copy operation or when the environment is reset.</p>
+
+
+            <details class="quote">
+              <summary>Source code in <code>sweagent/environment/repo.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_reset_commands</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Issued after the copy operation or when the environment is reset.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_get_git_reset_commands</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_commit</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
 
 
   </div>
@@ -3048,7 +3521,7 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
 
 </h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">repo_from_simplified_input</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="n">base_commit</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="s1">&#39;HEAD&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span><span class="s1">&#39;local&#39;</span><span class="p">,</span> <span class="s1">&#39;github&#39;</span><span class="p">,</span> <span class="s1">&#39;preexisting&#39;</span><span class="p">,</span> <span class="s1">&#39;auto&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;auto&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="sweagent.environment.repo.RepoConfig">RepoConfig</span></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">repo_from_simplified_input</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n">base_commit</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="s1">&#39;HEAD&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span><span class="s1">&#39;local&#39;</span><span class="p">,</span> <span class="s1">&#39;github&#39;</span><span class="p">,</span> <span class="s1">&#39;preexisting&#39;</span><span class="p">,</span> <span class="s1">&#39;auto&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;auto&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="sweagent.environment.repo.RepoConfig">RepoConfig</span></span>
 </code></pre></div>
 
     <div class="doc doc-contents first">
@@ -3072,7 +3545,7 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
                 <code>input</code>
             </td>
             <td>
-                  <code>str</code>
+                  <code><span title="str">str</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3103,31 +3576,32 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
       </tbody>
     </table>
 
+
             <details class="quote">
               <summary>Source code in <code>sweagent/environment/repo.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">164</span>
-<span class="normal">165</span>
-<span class="normal">166</span>
-<span class="normal">167</span>
-<span class="normal">168</span>
-<span class="normal">169</span>
-<span class="normal">170</span>
-<span class="normal">171</span>
-<span class="normal">172</span>
-<span class="normal">173</span>
-<span class="normal">174</span>
-<span class="normal">175</span>
-<span class="normal">176</span>
-<span class="normal">177</span>
-<span class="normal">178</span>
-<span class="normal">179</span>
-<span class="normal">180</span>
-<span class="normal">181</span>
-<span class="normal">182</span>
-<span class="normal">183</span>
-<span class="normal">184</span>
-<span class="normal">185</span>
-<span class="normal">186</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">repo_from_simplified_input</span><span class="p">(</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">repo_from_simplified_input</span><span class="p">(</span>
     <span class="o">*</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">base_commit</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;HEAD&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;local&quot;</span><span class="p">,</span> <span class="s2">&quot;github&quot;</span><span class="p">,</span> <span class="s2">&quot;preexisting&quot;</span><span class="p">,</span> <span class="s2">&quot;auto&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;auto&quot;</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RepoConfig</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Get repo config from a simplified input.</span>
@@ -3163,6 +3637,8 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
 
 
 
+
+  
 
 
 
@@ -3247,10 +3723,14 @@ SWE-agent will then start from this commit when trying to solve the problem.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.top", "content.action.edit", "navigation.footer", "content.code.copy", "content.footnote.tooltips", "header.autohide", "announce.dismiss", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.top", "content.action.edit", "navigation.footer", "content.code.copy", "content.footnote.tooltips", "header.autohide", "announce.dismiss", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../assets/js/sh-annotation.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
